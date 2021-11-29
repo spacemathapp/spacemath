@@ -1,0 +1,199 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      6850,        190]
+NotebookOptionsPosition[      3924,        118]
+NotebookOutlinePosition[      6038,        173]
+CellTagsIndexPosition[      5995,        170]
+WindowTitle->SpaceMath Overview
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {Cell["SPACE MATH TUTORIAL", "PacletNameCell"], Cell[TextData[Cell[BoxData[
+    
+     ActionMenuBox[
+      FrameBox[
+       InterpretationBox[Cell[TextData[{
+         "URL",
+         StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+          StripOnInput->False]
+        }]],
+        TextCell[
+         Row[{"URL", 
+           Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+       StripOnInput->False], {"\<\"SpaceMath/tutorial/SpaceMathPackage\"\>":>
+      None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+      Module[{DocumentationSearch`Private`nb$}, 
+       DocumentationSearch`Private`nb$ = NotebookPut[
+          Notebook[{
+            Cell["SpaceMath/tutorial/SpaceMathPackage"]}, Visible -> False]]; 
+       SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+       FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+       NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+      Delimiter, "\<\"Copy web URL\"\>":>
+      Module[{DocumentationSearch`Private`nb$}, 
+       DocumentationSearch`Private`nb$ = NotebookPut[
+          Notebook[{
+            Cell[
+             BoxData[
+              MakeBoxes[
+               Hyperlink[
+               "http://reference.wolfram.com/language/SpaceMath/tutorial/\
+SpaceMathPackage.html"], StandardForm]], "Input", TextClipboardType -> 
+             "PlainText"]}, Visible -> False]]; 
+       SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+       FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+       NotebookClose[DocumentationSearch`Private`nb$]; 
+       Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+        NotebookLocate[{
+          URL[
+           StringJoin[
+            If[
+             TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$23110], 
+             "http://reference.wolfram.com/system-modeler/", 
+             "http://reference.wolfram.com/language/"], 
+            "SpaceMath/tutorial/SpaceMathPackage", ".html"]], None}]}]},
+      Appearance->None,
+      MenuAppearance->Automatic,
+      MenuStyle->"URLMenu"]],
+     LineSpacing->{1.4, 0}]], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1],
+
+Cell[CellGroupData[{
+
+Cell["SpaceMath Overview", "TOCDocumentTitle",
+ CellID->526984710],
+
+Cell[CellGroupData[{
+
+Cell["Introduction", "Section",
+ CellID->214902485],
+
+Cell[CellGroupData[{
+
+Cell["LHC Higgs boson data", "Subsection",
+ CellGroupingRules->{"SectionGrouping", Inherited},
+ CellID->118596255],
+
+Cell[BoxData[{
+ RowBox[{
+  TemplateBox[{Cell[
+     TextData["Signal strength modifiers"]],
+    "paclet:SpaceMath/tutorial/Signalstrength"},
+   "RefLink",
+   BaseStyle->"Subsubsection"], "\n", " "}], "\n", Cell[BoxData[
+  SubscriptBox["R", "X"]], "InlineFormula"]}], "Subsubsection",
+ CellID->158635113],
+
+Cell[BoxData[{
+ RowBox[{
+  TemplateBox[{Cell[
+     TextData["Higgs boson coupling modifiers"]],
+    "paclet:SpaceMath/tutorial/HiggsBosonCoupling"},
+   "RefLink",
+   BaseStyle->"Subsubsection"], "\n", " "}], "\n", Cell[BoxData[
+  SubscriptBox["\[Kappa]", "i"]], "InlineFormula"]}], "Subsubsection",
+ CellID->11040781]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"SpaceMath Overview",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "TutorialColor", 
+  "LinkTrails" -> GridBox[{{
+      RowBox[{
+        ButtonBox[
+        "SpaceMath", ButtonData -> "paclet:SpaceMath/guide/SpaceMath", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}}, ColumnAlignments -> 
+    Left], "ExampleCounter" -> 1, "NeedPlatMsgIn" -> None, "RootCaptions" -> 
+  "", "Metadata" -> {
+   "built" -> "{2020, 10, 7, 13, 33, 52.0728428}", 
+    "history" -> {"1.0", "", "", ""}, "context" -> "SpaceMath`", 
+    "keywords" -> {}, "specialkeywords" -> {}, 
+    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "Space Math Tutorial", "language" -> "en", "paclet" -> "SpaceMath", 
+    "status" -> "None", "summary" -> " ", "synonyms" -> {}, "tabletags" -> 
+    DocumentationBuild`Make`Private`tabletaggingrules$23071, "title" -> 
+    "SpaceMath Overview", "titlemodifier" -> "", "windowtitle" -> 
+    "SpaceMath Overview", "type" -> "Tutorial", "uri" -> 
+    "SpaceMath/tutorial/SpaceMathPackage"}},
+FrontEndVersion->"12.0 for Microsoft Windows (64-bit) (April 8, 2019)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> Notebook], 
+   Cell[
+    StyleData["Output"], CellContext -> Notebook], 
+   Cell[
+    StyleData["TutorialMoreAboutSection"], 
+    CellGroupingRules -> {"SectionGrouping", 30}], 
+   Cell[
+    StyleData["RelatedTutorialsSection"], 
+    CellGroupingRules -> {"SectionGrouping", 30}], 
+   Cell[
+    StyleData["TutorialRelatedLinksSection"], 
+    CellGroupingRules -> {"SectionGrouping", 30}]}, Visible -> False, 
+  FrontEndVersion -> "12.0 for Microsoft Windows (64-bit) (April 8, 2019)", 
+  StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[590, 21, 2337, 54, 70, "AnchorBarGrid",ExpressionUUID->"bcda0cea-339f-4c53-9ec3-da103db7477c",
+ CellID->1],
+Cell[CellGroupData[{
+Cell[2952, 79, 66, 1, 70, "TOCDocumentTitle",ExpressionUUID->"6ed04930-d9a0-469c-8c5d-c4d3661babc1",
+ CellID->526984710],
+Cell[CellGroupData[{
+Cell[3043, 84, 51, 1, 70, "Section",ExpressionUUID->"b3cbf521-b786-4cde-a471-e579ab775869",
+ CellID->214902485],
+Cell[CellGroupData[{
+Cell[3119, 89, 114, 2, 70, "Subsection",ExpressionUUID->"96456e94-e343-44e1-add7-3c201ca8ec78",
+ CellGroupingRules->{"SectionGrouping", Inherited},
+ CellID->118596255],
+Cell[3236, 93, 302, 8, 70, "Subsubsection",ExpressionUUID->"a1eb9a27-5092-4fa5-97bc-4d2461f5eccc",
+ CellID->158635113],
+Cell[3541, 103, 317, 8, 70, "Subsubsection",ExpressionUUID->"c75b633d-e02b-44e1-96f7-690edae8c06a",
+ CellID->11040781]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[3897, 116, 23, 0, 70, "FooterCell",ExpressionUUID->"d67b9d68-0add-4892-b1fd-bd2cbfc5bf8f"]
+}
+]
+*)
+
+(* End of internal cache information *)

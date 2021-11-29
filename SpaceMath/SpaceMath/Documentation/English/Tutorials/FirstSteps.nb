@@ -1,0 +1,778 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     33530,        769]
+NotebookOptionsPosition[     28450,        665]
+NotebookOutlinePosition[     30943,        725]
+CellTagsIndexPosition[     30900,        722]
+WindowTitle->First steps
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {Cell["SPACE MATH TUTORIAL", "PacletNameCell"], Cell[TextData[Cell[BoxData[
+    
+     ActionMenuBox[
+      FrameBox[
+       InterpretationBox[Cell[TextData[{
+         "URL",
+         StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+          StripOnInput->False]
+        }]],
+        TextCell[
+         Row[{"URL", 
+           Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+       StripOnInput->False], {"\<\"SpaceMath/tutorial/FirstSteps\"\>":>
+      None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+      Module[{DocumentationSearch`Private`nb$}, 
+       DocumentationSearch`Private`nb$ = NotebookPut[
+          Notebook[{
+            Cell["SpaceMath/tutorial/FirstSteps"]}, Visible -> False]]; 
+       SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+       FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+       NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+      Delimiter, "\<\"Copy web URL\"\>":>
+      Module[{DocumentationSearch`Private`nb$}, 
+       DocumentationSearch`Private`nb$ = NotebookPut[
+          Notebook[{
+            Cell[
+             BoxData[
+              MakeBoxes[
+               Hyperlink[
+               "http://reference.wolfram.com/language/SpaceMath/tutorial/\
+FirstSteps.html"], StandardForm]], "Input", TextClipboardType -> 
+             "PlainText"]}, Visible -> False]]; 
+       SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+       FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+       NotebookClose[DocumentationSearch`Private`nb$]; 
+       Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+        NotebookLocate[{
+          URL[
+           StringJoin[
+            If[
+             TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$19506], 
+             "http://reference.wolfram.com/system-modeler/", 
+             "http://reference.wolfram.com/language/"], 
+            "SpaceMath/tutorial/FirstSteps", ".html"]], None}]}]},
+      Appearance->None,
+      MenuAppearance->Automatic,
+      MenuStyle->"URLMenu"]],
+     LineSpacing->{1.4, 0}]], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1],
+
+Cell[CellGroupData[{
+
+Cell["First steps", "Title",
+ CellID->509267359],
+
+Cell[TextData[{
+ "In order to introduce new users quickly and concisely, we display a \
+collection of the basic ",
+ StyleBox["SpaceMath v1.0",
+  FontWeight->"Bold"],
+ " commands for the ",
+ StyleBox["Signal Strengths",
+  FontWeight->"Bold"],
+ " with their application to the Two-Higgs-Doublet Model Type-III (THDM-III). "
+}], "Text",
+ CellID->1534169418],
+
+Cell[TextData[{
+ "In the following tables we show the corresponding commands to the ",
+ StyleBox["Signal Strengths",
+  FontWeight->"Bold"],
+ ". "
+}], "Text",
+ CellID->62659039],
+
+Cell[BoxData[GridBox[{
+   {
+    RowBox[{
+     RowBox[{"RVone", "[", "\n", 
+      RowBox[{
+      "ghtt", ",", "\n", "ghbb", ",", "\n", "ghVV", ",", "\n", "x", ",", "\n",
+        "xmin", ",", "\n", "xmax", ",", "\n", "xlabel"}], "]"}], "\n", 
+     RowBox[{"[", 
+      RowBox[{"[", "i", "]"}], "]"}]}], Cell[TextData[{
+     "This command evaluates ",
+     Cell[BoxData[
+      SubscriptBox["R", "V"]], "InlineFormula"],
+     " with V=W, Z when there is dependence only on one parameter. The \
+arguments ghtt, ghbb and ghVV are the htt, hbb, hVV couplings. Here, h \
+represents to SM-like Higgs boson while t and b are the top and bottom \
+quarks. The label x indicates the parameter to constrain, while xmin and xmax \
+are the initial and final values defined by users and xlabel is used for \
+indicates the X axis label. Finally, [[i]] stands for confidence level, i=1 \
+(2) indicates 1\[Sigma] (2\[Sigma])."
+    }], "TableText"]},
+   {
+    RowBox[{"TableRVone", "[", "\n", 
+     RowBox[{
+     "ghtt", ",", "\n", "ghbb", ",", "\n", "ghVV", ",", "\n", "x", ",", "\n", 
+      "xmin", ",", "\n", "xmax", ",", "\n", "xstep"}], "]"}], Cell[TextData[{
+     "This command generates a table of the signal strength ",
+     Cell[BoxData[
+      SubscriptBox["R", "V"]], "InlineFormula"],
+     ", with V= W, Z. The arguments ghtt, ghbb and ghVV are the htt, hbb, hVV \
+couplings. Here, h represents to SM-like Higgs boson while t and b the top \
+and bottom quarks. The label x indicates the parameter to constrain, while \
+xmin and xmax are the initial and final values defined by users and xstep is \
+used to indicates the steps from xmin to xmax. The output file will be saved \
+in $UserDocumentsDirectory."
+    }], "TableText"]}
+  }]], "DefinitionBox",
+ CellID->2096742444],
+
+Cell[TextData[{
+ "Table 1. Signal Strength ",
+ Cell[BoxData[
+  SubscriptBox["R", "V"]], "InlineFormula"],
+ " with V= W, Z. Dependence on one parameter at 1\[Sigma] or 2\[Sigma]."
+}], "Caption",
+ CellID->1891092685],
+
+Cell[BoxData[GridBox[{
+   {
+    RowBox[{
+     RowBox[{"RGAMone", "[", "\n", 
+      RowBox[{
+      "ghtt", ",", "\n", "ghbb", ",", "\n", "ghWW", ",", "\n", "gCH", ",", 
+       "\n", "mCH", ",", "\n", "x", ",", "\n", "xmin", ",", "\n", "xmax", ",",
+        "\n", "xlabel"}], "]"}], "\n", 
+     RowBox[{"[", 
+      RowBox[{"[", "i", "]"}], "]"}]}], Cell[TextData[{
+     "This command evaluates ",
+     Cell[BoxData[
+      SubscriptBox["R", "\[Gamma]"]], "InlineFormula"],
+     " when there is dependence only on one parameter. The arguments ghtt, \
+ghbb, ghWW and gCH are the htt, hbb, hWW and ",
+     Cell[BoxData[
+      RowBox[{"h", 
+       SuperscriptBox["H", "-"], 
+       SuperscriptBox["H", "+"]}]]],
+     " couplings. Here, h represents to SM-like Higgs boson, t and b the top \
+and bottom quarks, ",
+     Cell[BoxData[
+      SuperscriptBox["H", "-"]]],
+     " the charged scalar boson. Labels mCH and x indicate the charged scalar \
+mass and the parameter to constraint, while xmin and xmax are the initial and \
+final values defined by users and xlabel is used for indicates the X axis \
+label. Finally, [[i]] stands for confidence level, i=1 (2) indicates \
+1\[Sigma] (2\[Sigma])."
+    }], "TableText"]},
+   {
+    RowBox[{
+     RowBox[{"TableRGAMone", "[", "\n", 
+      RowBox[{
+      "ghtt", ",", "\n", "ghbb", ",", "\n", "ghWW", ",", "\n", "gCH", ",", 
+       "\n", "mCH", ",", "\n", "x", ",", "\n", "xmin", ",", "\n", "xmax", ",",
+        "\n", "xstep"}], "]"}], "\n"}], Cell[TextData[{
+     "This command generates a table of the signal strength ",
+     Cell[BoxData[
+      SubscriptBox["R", "\[Gamma]"]], "InlineFormula"],
+     ". The arguments ghtt, ghbb, ghWW, gCH and mCH are the htt, hbb, hWW, ",
+     Cell[BoxData[
+      RowBox[{
+       SuperscriptBox["hH", "-"], 
+       SuperscriptBox["H", "+"]}]]],
+     " couplings, while mCH is the charged scalar boson mass that could to \
+contributes to the process. Here, h represents to SM-like Higgs boson while t \
+and b the top and bottom quarks. The label x indicates the parameter to \
+constrain, while xmin and xmax are the initial and final values defined by \
+users and xstep is used to indicates the steps from xmin to xmax. The output \
+file will be saved in $UserDocumentsDirectory."
+    }], "TableText"]}
+  }]], "DefinitionBox",
+ CellID->178227545],
+
+Cell[TextData[{
+ "Table 2. Signal Strength ",
+ Cell[BoxData[
+  SubscriptBox["R", "\[Gamma]"]], "InlineFormula"],
+ ". Dependence on one parameter at 1\[Sigma] or 2\[Sigma]."
+}], "Caption",
+ CellID->176027171],
+
+Cell[BoxData[GridBox[{
+   {
+    RowBox[{
+     RowBox[{"RBOTone", "[", "\n", 
+      RowBox[{
+      "ghtt", ",", "\n", "ghbb", ",", "\n", "x", ",", "\n", "xmin", ",", "\n",
+        "xmax", ",", "\n", "xlabel"}], "]"}], "\n", 
+     RowBox[{"[", 
+      RowBox[{"[", "i", "]"}], "]"}]}], Cell[TextData[{
+     "This command evaluates ",
+     Cell[BoxData[
+      SubscriptBox["R", "b"]], "InlineFormula"],
+     " when there is dependence only on one parameter. The arguments ghtt, \
+ghbb are the htt and hbb couplings. Here, h represents to SM-like Higgs boson \
+while t and b are the top and bottom quarks. The label x indicates the \
+parameter to constrain, while xmin and xmax are the initial and final values \
+defined by users and xlabel is used for indicates the X axis label. Finally, \
+[[i]] stands for confidence level, i=1 (2) indicates 1\[Sigma] (2\[Sigma])."
+    }], "TableText"]},
+   {
+    RowBox[{
+     RowBox[{"TableRBOTone", "[", "\n", 
+      RowBox[{
+      "ghtt", ",", "\n", "ghbb", ",", "\n", "x", ",", "\n", "xmin", ",", "\n",
+        "xmax", ",", "\n", "xstep"}], "]"}], "\n"}], Cell[TextData[{
+     "This command generates a table of the signal strength ",
+     Cell[BoxData[
+      SubscriptBox["R", "b"]], "InlineFormula"],
+     ". The arguments ghtt and ghbb are the htt and hbb couplings. Here, h \
+represents to SM-like Higgs boson while t and b the top and bottom quarks. \
+The label x indicates the parameter to constrain, while xmin and xmax are the \
+initial and final values defined by users and xstep is used to indicates the \
+steps from xmin to xmax. The output file will be saved in \
+$UserDocumentsDirectory."
+    }], "TableText"]}
+  }]], "DefinitionBox",
+ CellID->178414509],
+
+Cell[TextData[{
+ "Table 3. Signal Strength ",
+ Cell[BoxData[
+  SubscriptBox["R", "b"]], "InlineFormula"],
+ ". Dependence on one parameter at 1\[Sigma] or 2\[Sigma]."
+}], "Caption",
+ CellID->17321489],
+
+Cell[BoxData[GridBox[{
+   {
+    RowBox[{
+     RowBox[{"RTAUone", "[", "\n", 
+      RowBox[{"ghtt", ",", "\n", "ghbb", ",", "\n", 
+       RowBox[{"ghtautau", "\n", "x"}], ",", "\n", "xmin", ",", "\n", "xmax", 
+       ",", "\n", "xlabel"}], "]"}], "\n", 
+     RowBox[{"[", 
+      RowBox[{"[", "i", "]"}], "]"}]}], Cell[TextData[{
+     "This command evaluates ",
+     Cell[BoxData[
+      FormBox[
+       SubscriptBox["R", "\[Tau]"], TraditionalForm]]],
+     " when there is dependence only on one parameter. The arguments ghtt, \
+ghbb and ghtautau are the htt, hbb and htautau couplings. Here, h represents \
+to SM-like Higgs boson, t and b the top and bottom quarks and tau stands for \
+tau-lepton. Labels mCH and x indicate the charged scalar mass and the \
+parameter to constrain, while xmin and xmax are the initial and final values \
+defined by users and xlabel is used for indicates the X axis label. Finally, \
+[[i]] stands for confidence level, i=1 (2) indicates 1\[Sigma] (2\[Sigma])."
+    }], "TableText"]},
+   {
+    RowBox[{
+     RowBox[{"TableRTAUone", "[", "\n", 
+      RowBox[{"ghtt", ",", "\n", "ghbb", ",", "\n", 
+       RowBox[{"ghtautau", "\n", "x"}], ",", "\n", "xmin", ",", "\n", "xmax", 
+       ",", "\n", "xstep"}], "]"}], "\n"}], Cell[TextData[{
+     "This command generates a table of the signal strength ",
+     Cell[BoxData[
+      FormBox[
+       SubscriptBox["R", "\[Tau]"], TraditionalForm]]],
+     ". The arguments ghtt, ghbb and ghtautau are the htt, hbb and htautau \
+couplings. Here, h represents to SM-like Higgs boson while t and b are the \
+top and bottom quarks and tau stands for tau-lepton. The label x indicates \
+the parameter to constrain, while xmin and xmax are the initial and final \
+values defined by users and xstep to indicates the steps from xmin to xmax. \
+The output file will be saved in $UserDocumentsDirectory."
+    }], "TableText"]}
+  }]], "DefinitionBox",
+ CellID->438774238],
+
+Cell[TextData[{
+ "Table 4. Signal Strength ",
+ Cell[BoxData[
+  SubscriptBox["R", "\[Tau]"]], "InlineFormula"],
+ ". Dependence on one parameter at 1\[Sigma] or 2\[Sigma]."
+}], "Caption",
+ CellID->114737056],
+
+Cell[BoxData[GridBox[{
+   {
+    RowBox[{
+     RowBox[{"RV", "[", "\n", 
+      RowBox[{
+      "ghtt", ",", "\n", "ghbb", ",", "\n", "ghVV", ",", "\n", "x", ",", "\n",
+        "xmin", ",", "\n", "xmax", ",", "\n", "ymin", ",", "\n", "ymax", ",", 
+       "\n", "xlabel", ",", "\n", "ylabel", ",", "\n", "xfor", ",", "\n", 
+       "yfor", ",", "\n", "xformin", ",", "\n", "xformax", ",", "\n", 
+       "xforstep", ",", "\n", "PP"}], "]"}], "\n", 
+     RowBox[{"[", 
+      RowBox[{"[", "i", "]"}], "]"}]}], Cell[TextData[{
+     "This command evaluates ",
+     Cell[BoxData[
+      FormBox[
+       SubscriptBox["R", "V"], TraditionalForm]]],
+     " with V=W, Z when there is dependence on two or more parameters. The \
+arguments ghtt, ghbb, ghVV are the htt, hbb, hVV couplings. Here, h \
+represents to SM-like Higgs boson while t and b the top and bottom quarks. \
+Labels x and y indicate the parameters to constrain, while xmin (ymin) and \
+xmax (ymax) are the initial and final values defined by users. Argument \
+xlabel (ylabel) is used for indicates the X axis label (Y axis label). The \
+arguments xfor (yfor), xformin (yformin), xforstep (yforstep) represent an \
+additional parameter to constrain, namely: initial value, final value and the \
+steps from xformin (yformin) to xformax (yformax), respectively. Label [[i]] \
+stands for confidence level, i=1 (2) indicates 1\[Sigma] (2\[Sigma]), \
+Finally, PP is an option for plotting functions that specifies how many \
+initial sample points to use.\n"
+    }], "TableText"]},
+   {
+    RowBox[{
+     RowBox[{"TableRV", "[", "\n", 
+      RowBox[{
+      "ghtt", ",", "\n", "ghbb", ",", "\n", "ghVV", ",", "\n", "x", ",", "\n",
+        "xmin", ",", "\n", "xmax", ",", "\n", "xstep", ",", "\n", "y", ",", 
+       "\n", "ymin", ",", "\n", "ymax", ",", "\n", "ystep"}], "]"}], "\n"}], 
+    Cell[TextData[{
+     "This command generates a table of the signal strength ",
+     Cell[BoxData[
+      FormBox[
+       SubscriptBox["R", "V"], TraditionalForm]]],
+     " with V= W, Z gauge bosons. The arguments ghtt, ghbb and ghVV are the \
+htt, hbb and hVV couplings. Here, h represents to SM-like Higgs boson while t \
+and b the top and bottom quarks. Labels x and y indicate the parameters to \
+constrain, while xmin (ymin) and xmax (ymax) are the initial and final values \
+defined by users and xstep (ystep) is used to indicates the steps from xmin \
+to xmax (ymin to ymax). The output file will be saved in \
+$UserDocumentsDirectory."
+    }], "TableText"]}
+  }]], "DefinitionBox",
+ CellID->96629475],
+
+Cell[TextData[{
+ "Table 5. Signal Strength ",
+ Cell[BoxData[
+  SubscriptBox["R", "V"]], "InlineFormula"],
+ " (V=W,Z) when there are dependence up to four parameters at 1\[Sigma] or 2\
+\[Sigma]."
+}], "Caption",
+ CellID->8138014],
+
+Cell[BoxData[GridBox[{
+   {
+    RowBox[{
+     RowBox[{"RGam", "[", "\n", 
+      RowBox[{
+      "ghtt", ",", "\n", "ghbb", ",", "\n", "ghWW", ",", "\n", "gCH", ",", 
+       "\n", "mCH", ",", "\n", "x", ",", "\n", "y", ",", "\n", "xmin", ",", 
+       "\n", "xmax", ",", "\n", "ymin", ",", "\n", "ymax", ",", "\n", 
+       "xlabel", ",", "\n", "ylabel", ",", "\n", "xfor", ",", "\n", "yfor", 
+       ",", "\n", "xformin", ",", "\n", "xformax", ",", "\n", "xforstep", ",",
+        "\n", "PP"}], "]"}], "\n", 
+     RowBox[{"[", 
+      RowBox[{"[", "i", "]"}], "]"}]}], Cell[TextData[{
+     "This command evaluates ",
+     Cell[BoxData[
+      SubscriptBox["R", "\[Gamma]"]], "InlineFormula"],
+     " when there is dependence on two or more parameters. The arguments \
+ghtt, ghbb, ghWW and gCH are the htt, hbb, hWW and ",
+     Cell[BoxData[
+      FormBox[
+       StyleBox[
+        RowBox[{
+         SuperscriptBox["hH", "-"], 
+         SuperscriptBox["H", "+"]}], "InformationUsageText",
+        StripOnInput->False,
+        LineSpacing->{1.5, 1.5, 3.}], TraditionalForm]]],
+     " couplings while mCH stands for the charged scalar boson mass. Here, h \
+represents to SM-like Higgs boson while t and b the top and bottom querkas. \
+Labels x and y indicate the parameters to constrain, while xmin (ymin) and \
+xmax (ymax) are the initial and final values defined by users. Argument \
+xlabel (ylabel) is used for indicates the X axis label (Y axis label). The \
+arguments xfor (yfor), xformin (yformin), xforstep (yforstep) represent an \
+additional parameter to constrain, namely: initial value, final value and the \
+steps from xformin (yformin) to xformax (yformax), respectively. Label [[i]] \
+stands for confidence level, i=1 (2) indicates 1\[Sigma] (2\[Sigma]), \
+Finally, PP is an option for plotting functions that specifies how many \
+initial sample points to use.\n"
+    }], "TableText"]},
+   {
+    RowBox[{
+     RowBox[{"TableRV", "[", "\n", 
+      RowBox[{
+      "ghtt", ",", "\n", "ghbb", ",", "\n", "ghVV", ",", "\n", "x", ",", "\n",
+        "xmin", ",", "\n", "xmax", ",", "\n", "xstep", ",", "\n", "y", ",", 
+       "\n", "ymin", ",", "\n", "ymax", ",", "\n", "ystep"}], "]"}], "\n"}], 
+    Cell[TextData[{
+     "This command generates a table of the signal strength ",
+     Cell[BoxData[
+      SubscriptBox["R", "\[Gamma]"]]],
+     ". The arguments ghtt, ghbb, ghWW and gCH are the htt, hbb, hWW and ",
+     Cell[BoxData[
+      FormBox[
+       StyleBox[
+        RowBox[{"h", "-", 
+         RowBox[{
+          SuperscriptBox["H", "-"], 
+          SuperscriptBox["H", "+"]}]}], "InformationUsageText",
+        StripOnInput->False,
+        LineSpacing->{1.5, 1.5, 3.}], TraditionalForm]]],
+     " couplings. Here, h represents to SM-like Higgs boson while t and b the \
+top and bottom quarks. Labels x and y indicate the parameters to constrain, \
+while xmin (ymin) and xmax (ymax) are the initial and final values defined by \
+users and xstep (ystep) is used to indicates the steps from xmin to xmax \
+(ymin to ymax). The output file will be saved in $UserDocumentsDirectory."
+    }], "TableText"]}
+  }]], "DefinitionBox",
+ CellID->13751234],
+
+Cell[TextData[{
+ "Table 6. Signal Strength ",
+ Cell[BoxData[
+  SubscriptBox["R", "\[Gamma]"]], "InlineFormula"],
+ " when there are dependence up to four parameters at 1\[Sigma] or \
+2\[Sigma]."
+}], "Caption",
+ CellID->216751024],
+
+Cell[BoxData[GridBox[{
+   {
+    RowBox[{
+     RowBox[{"Rb", "[", "\n", 
+      RowBox[{
+      "ghtt", ",", "\n", "ghbb", ",", "\n", "x", ",", "\n", "y", ",", "\n", 
+       "xmin", ",", "\n", "xmax", ",", "\n", "ymin", ",", "\n", "ymax", ",", 
+       "\n", "xlabel", ",", "\n", "ylabel", ",", "\n", "xfor", ",", "\n", 
+       "yfor", ",", "\n", "xformin", ",", "\n", "xformax", ",", "\n", 
+       "yformin", ",", "\n", "yformax", ",", "\n", "yforstep", ",", "\n", 
+       "PP"}], "]"}], "\n", 
+     RowBox[{"[", 
+      RowBox[{"[", "i", "]"}], "]"}]}], Cell[TextData[{
+     "This command evaluates ",
+     Cell[BoxData[
+      FormBox[
+       SubscriptBox["R", "b"], TraditionalForm]]],
+     ", when there is dependence on two or more parameters. The arguments \
+ghtt and ghbb are the htt, hbb couplings. Here, h represents to SM-like Higgs \
+boson while t and b are the top and bottom quarks. Labels x and y indicate \
+the parameters to constrain, while xmin (ymin) and xmax (ymax) are the \
+initial and final values defined by users. Argument xlabel (ylabel) is used \
+for indicates the X axis label (Y axis label). The arguments xfor (yfor), \
+xformin (yformin), xforstep (yforstep) represent an additional parameter to \
+constrain, namely: initial value, final value and the steps from xformin \
+(yformin) to xformax (yformax), respectively. Label [[i]] stands for \
+confidence level, i=1 (2) indicates 1\[Sigma] (2\[Sigma]), Finally, PP is an \
+option for plotting functions that specifies how many initial sample points \
+to use.\n"
+    }], "TableText"]},
+   {
+    RowBox[{
+     RowBox[{"TableRb", "[", "\n", 
+      RowBox[{
+      "ghtt", ",", "\n", "ghbb", ",", "\n", "x", ",", "\n", "xmin", ",", "\n",
+        "xmax", ",", "\n", "xstep", ",", "\n", "y", ",", "\n", "ymin", ",", 
+       "\n", "ymax", ",", "\n", "ystep"}], "]"}], "\n"}], Cell[TextData[{
+     "This command generates a table of the signal strength ",
+     Cell[BoxData[
+      SubscriptBox["R", "b"]]],
+     ". The arguments ghtt, ghbb are the htt, hbb couplings. Here, h \
+represents to SM-like Higgs boson while t and b are the top and bottom \
+quarks. Labels x and y indicate the parameters to constrain, while xmin \
+(ymin) and xmax (ymax) are the initial and final values defined by users and \
+xstep (ystep) is used to indicates the steps from xmin to xmax (ymin to \
+ymax). The output file will be saved in $UserDocumentsDirectory."
+    }], "TableText"]}
+  }]], "DefinitionBox",
+ CellID->327053652],
+
+Cell[TextData[{
+ "Table 7. Signal Strength ",
+ Cell[BoxData[
+  SubscriptBox["R", "b"]], "InlineFormula"],
+ " when there are dependence up to four parameters at 1\[Sigma] or \
+2\[Sigma]."
+}], "Caption",
+ CellID->287495618],
+
+Cell[BoxData[GridBox[{
+   {
+    RowBox[{
+     RowBox[{"Rtau", "[", "\n", 
+      RowBox[{
+      "ghtt", ",", "\n", "ghbb", ",", "\n", "ghtautau", ",", "\n", "x", ",", 
+       "\n", "y", ",", "\n", "xmin", ",", "\n", "xmax", ",", "\n", "ymin", 
+       ",", "\n", "ymax", ",", "\n", "xlabel", ",", "\n", "ylabel", ",", "\n",
+        "xfor", ",", "\n", "yfor", ",", "\n", "xformin", ",", "\n", "xformax",
+        ",", "\n", "xforstep", ",", "\n", "yformin", ",", "\n", "yformax", 
+       ",", "\n", 
+       RowBox[{"yforstep", "\n", "PP"}]}], "]"}], "\n", 
+     RowBox[{"[", 
+      RowBox[{"[", "i", "]"}], "]"}]}], Cell[TextData[{
+     "This command evaluates ",
+     Cell[BoxData[
+      FormBox[
+       SubscriptBox["R", "\[Tau]"], TraditionalForm]]],
+     ", when there is dependence on two or more parameters. The arguments \
+ghtt, ghbb and ghtautau are the htt, hbb and htautau couplings. Here, h \
+represents to SM-like Higgs boson while t, b and tau are the top and bottom \
+quarks and the tau-lepton. Labels x and y indicate the parameters to \
+constrain, while xmin (ymin) and xmax (ymax) are the initial and final values \
+defined by users. Argument xlabel (ylabel) is used for indicates the X axis \
+label (Y axis label). The arguments xfor (yfor), xformin (yformin), xforstep \
+(yforstep) represent an additional parameter to constrain, namely: initial \
+value, final value and the steps from xformin (yformin) to xformax (yformax), \
+respectively. Label [[i]] stands for confidence level, i=1 (2) indicates 1\
+\[Sigma] (2\[Sigma]), Finally, PP is an option for plotting functions that \
+specifies how many initial sample points to use.\n\n"
+    }], "TableText"]},
+   {
+    RowBox[{
+     RowBox[{"TableRtau", "[", "\n", 
+      RowBox[{
+      "ghtt", ",", "\n", "ghbb", ",", "\n", "ghtautau", ",", "\n", "x", ",", 
+       "\n", "xmin", ",", "\n", "xmax", ",", "\n", "xstep", ",", "\n", "y", 
+       ",", "\n", "ymin", ",", "\n", "ymax", ",", "\n", "ystep"}], "]"}], 
+     "\n"}], Cell[TextData[{
+     "This command generates a table of the signal strength ",
+     Cell[BoxData[
+      FormBox[
+       SubscriptBox["R", "\[Tau]"], TraditionalForm]]],
+     ". The arguments ghtt, ghbb and ghtautau are the htt, hbb and htautau \
+couplings. Here, h represents to SM-like Higgs boson while t, b and tau are \
+the top and bottom quarks and the tau-lepton. Labels x and y indicate the \
+parameters to constrain, while xmin (ymin) and xmax (ymax) are the initial \
+and final values defined by users and xstep (ystep) is used to indicates the \
+steps from xmin to xmax (ymin to ymax). The output file will be saved in \
+$UserDocumentsDirectory."
+    }], "TableText"]}
+  }]], "DefinitionBox",
+ CellID->285585198],
+
+Cell[TextData[{
+ "Table 8. Signal Strength ",
+ Cell[BoxData[
+  SubscriptBox["R", "\[Tau]"]], "InlineFormula"],
+ " when there are dependence up to four parameters at 1\[Sigma] or \
+2\[Sigma]."
+}], "Caption",
+ CellID->609780990],
+
+Cell[BoxData[GridBox[{
+   {
+    RowBox[{
+     RowBox[{"RXALL", "[", "\n", 
+      RowBox[{
+      "ghtt", ",", "\n", "ghbb", ",", "\n", "ghWW", ",", "\n", "ghtautau", 
+       ",", "\n", "gCH", ",", "\n", "mCH", ",", "\n", "x", ",", "\n", "y", 
+       ",", "\n", "xmin", ",", "\n", "xmax", ",", "\n", "ymin", ",", "\n", 
+       "ymax", ",", "\n", "xlabel", ",", "\n", "ylabel", ",", "\n", "xfor", 
+       ",", "\n", "yfor", ",", "\n", "xformin", ",", "\n", "xformax", ",", 
+       "\n", "xforstep", ",", "\n", "yformin", ",", "\n", "yformax", ",", 
+       "\n", 
+       RowBox[{"yforstep", "\n", "PP"}]}], "]"}], "\n", 
+     RowBox[{"[", 
+      RowBox[{"[", "i", "]"}], "]"}]}], Cell[TextData[{
+     "This command evaluates all signal strengths, when there is dependence \
+on two or more parameters. The arguments ghtt, ghbb, ghZZ, ghWW, ghtautau and \
+gCH are the htt, hbb, \nhZZ, hWW, htautau and ",
+     Cell[BoxData[
+      FormBox[
+       StyleBox[
+        RowBox[{
+         SuperscriptBox["hH", "-"], 
+         SuperscriptBox["H", "+"]}], "InformationUsageText",
+        StripOnInput->False,
+        LineSpacing->{1.5, 1.5, 3.}], TraditionalForm]]],
+     " couplings. Here, h represents to SM-like Higgs boson while t and b are \
+the top and bottom quarks; V=Z, W are the gauge bosons, tau is the tau lepton \
+and ",
+     Cell[BoxData[
+      FormBox[
+       SuperscriptBox["H", "-"], TraditionalForm]]],
+     " is a charged scalar boson. Labels x and y \nindicate the parameters to \
+constrain, while xmin (ymin) and xmax (ymax) are the initial and final values \
+defined by users. Argument xlabel (ylabel) is used for indicates the X axis \
+label (Y axis label). The arguments xfor (yfor), xformin (yformin), xforstep \
+(yforstep) represent an additional parameter to constrain, namely: initial \
+value, final value and the steps from xformin (yformin) to xformax (yformax), \
+respectively; mCH stands for the charged scalar boson. Label [[i]] stands for \
+confidence level, i=1 (2) indicates 1\[Sigma] (2\[Sigma]), Finally, PP is an \
+option for plotting functions that specifies how many initial sample points \
+to use.\n\n\n"
+    }], "TableText"]},
+   {
+    RowBox[{
+     RowBox[{"RXintersection", "[", "\n", 
+      RowBox[{
+      "ghtt", ",", "\n", "ghbb", ",", "\n", "ghZZ", ",", "\n", "ghWW", ",", 
+       "\n", "ghtautau", ",", "\n", "gCH", ",", "\n", "mCH", ",", "\n", "x", 
+       ",", "\n", "y", ",", "\n", "xmin", ",", "\n", "xmax", ",", "\n", 
+       "ymin", ",", "\n", "ymax", ",", "\n", "xlabel", ",", "\n", "ylabel", 
+       ",", "\n", "xfor", ",", "\n", "yfor", ",", "\n", "xformin", ",", "\n", 
+       "xformax", ",", "\n", "xforstep", ",", "\n", "yformin", ",", "\n", 
+       "yformax", ",", "\n", 
+       RowBox[{"yforstep", "\n", "PP"}]}], "]"}], "\n"}], Cell[TextData[{
+     "This command evaluates the intersection of all signal strengths, when \
+there is dependence on two or more parameters. The arguments ghtt, ghbb, \
+ghZZ, ghWW, ghtautau and gCH are the htt, hbb, hZZ, hWW, htautau and ",
+     Cell[BoxData[
+      FormBox[
+       StyleBox[
+        RowBox[{
+         SuperscriptBox["hH", "-"], 
+         SuperscriptBox["H", "+"]}], "InformationUsageText",
+        StripOnInput->False,
+        LineSpacing->{1.5, 1.5, 3.}], TraditionalForm]]],
+     " couplings. Here, h represents to SM-like Higgs boson while t and b are \
+the top and bottom quarks; V=Z, W are the gauge bosons, tau is the tau lepton \
+and ",
+     Cell[BoxData[
+      FormBox[
+       SuperscriptBox["H", "-"], TraditionalForm]]],
+     " is a charged scalar boson. Labels x and y indicate the parameters to \
+constrain, while xmin (ymin) and xmax (ymax) are the initial and final values \
+defined by users. Argument xlabel (ylabel) is used for indicates the X axis \
+label (Y axis label). The arguments xfor (yfor), xformin (yformin), xforstep \
+(yforstep) represent an additional parameter to constrain, namely: initial \
+value, final value and the steps from xformin (yformin) to xformax (yformax), \
+respectively; mCH stands for the charged scalar boson. Label [[i]] stands for \
+confidence level, i=1 (2) indicates 1\[Sigma] (2\[Sigma]), Finally, PP is an \
+option for plotting functions that specifies how many initial sample points \
+to use.\n"
+    }], "TableText"]}
+  }]], "DefinitionBox",
+ CellID->217214885],
+
+Cell[TextData[{
+ "Table 9. All signal strengths ",
+ Cell[BoxData[
+  SubscriptBox["R", "X"]], "InlineFormula"],
+ ". Signal strengths intersection ",
+ Cell[BoxData[
+  SubscriptBox["R", "X"]]],
+ "."
+}], "Caption",
+ CellID->500291650]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"First steps",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "TutorialColor", 
+  "LinkTrails" -> GridBox[{{
+      RowBox[{
+        ButtonBox[
+        "SpaceMath", ButtonData -> "paclet:SpaceMath/guide/SpaceMath", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}}, ColumnAlignments -> 
+    Left], "ExampleCounter" -> 1, "NeedPlatMsgIn" -> None, "RootCaptions" -> 
+  "", "Metadata" -> {
+   "built" -> "{2020, 10, 7, 13, 33, 34.4453933}", 
+    "history" -> {"1.0", "", "", ""}, "context" -> "SpaceMath`", 
+    "keywords" -> {}, "specialkeywords" -> {}, 
+    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "Space Math Tutorial", "language" -> "en", "paclet" -> "SpaceMath", 
+    "status" -> "None", "summary" -> 
+    "In order to introduce new users quickly and concisely, we display a \
+collection of the basic SpaceMath v1.0 commands for the Signal Strengths with \
+their application to the Two-Higgs-Doublet Model Type-III (THDM-III). In the \
+following tables we show the corresponding commands to the Signal Strengths. \
+Table 1. Signal Strength R_V with V= W, Z. Dependence on one parameter at 1\
+\[Sigma] or 2\[Sigma].", "synonyms" -> {}, "tabletags" -> 
+    DocumentationBuild`Make`Private`tabletaggingrules$19449, "title" -> 
+    "First steps", "titlemodifier" -> "", "windowtitle" -> "First steps", 
+    "type" -> "Tutorial", "uri" -> "SpaceMath/tutorial/FirstSteps"}},
+FrontEndVersion->"12.0 for Microsoft Windows (64-bit) (April 8, 2019)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> Notebook], 
+   Cell[
+    StyleData["Output"], CellContext -> Notebook], 
+   Cell[
+    StyleData["TutorialMoreAboutSection"], 
+    CellGroupingRules -> {"SectionGrouping", 30}], 
+   Cell[
+    StyleData["RelatedTutorialsSection"], 
+    CellGroupingRules -> {"SectionGrouping", 30}], 
+   Cell[
+    StyleData["TutorialRelatedLinksSection"], 
+    CellGroupingRules -> {"SectionGrouping", 30}]}, Visible -> False, 
+  FrontEndVersion -> "12.0 for Microsoft Windows (64-bit) (April 8, 2019)", 
+  StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[583, 21, 2313, 54, 70, "AnchorBarGrid",ExpressionUUID->"1a867044-5161-4cc9-91c5-ac3024390480",
+ CellID->1],
+Cell[CellGroupData[{
+Cell[2921, 79, 48, 1, 70, "Title",ExpressionUUID->"816b7260-d78b-42e7-8537-3d98165300d4",
+ CellID->509267359],
+Cell[2972, 82, 354, 10, 70, "Text",ExpressionUUID->"06373aa6-5ee6-46df-b5e9-5797f430fd22",
+ CellID->1534169418],
+Cell[3329, 94, 176, 6, 70, "Text",ExpressionUUID->"ee97b6d9-35ea-4216-8ef8-8c9b0aed6b81",
+ CellID->62659039],
+Cell[3508, 102, 1761, 36, 70, "DefinitionBox",ExpressionUUID->"5a41b0ea-9e18-48df-8992-edfc371ee94b",
+ CellID->2096742444],
+Cell[5272, 140, 214, 6, 70, "Caption",ExpressionUUID->"4dc72c9d-919b-4dac-bd64-77f4845add3a",
+ CellID->1891092685],
+Cell[5489, 148, 2319, 52, 70, "DefinitionBox",ExpressionUUID->"09b90d33-7ebb-4963-a81c-eea1bcd15640",
+ CellID->178227545],
+Cell[7811, 202, 207, 6, 70, "Caption",ExpressionUUID->"bf5f9dc8-32b0-45a7-869e-8d0d6c105e43",
+ CellID->176027171],
+Cell[8021, 210, 1704, 36, 70, "DefinitionBox",ExpressionUUID->"946ecc87-7f71-448e-bb3e-7c71d55f0efb",
+ CellID->178414509],
+Cell[9728, 248, 199, 6, 70, "Caption",ExpressionUUID->"1aa19785-f3b1-4044-a256-785b2d4208ac",
+ CellID->17321489],
+Cell[9930, 256, 1928, 39, 70, "DefinitionBox",ExpressionUUID->"5ec8fcba-b2e6-4c1b-a0c6-ccb2835a40f7",
+ CellID->438774238],
+Cell[11861, 297, 205, 6, 70, "Caption",ExpressionUUID->"1b51f26c-1c51-4fc9-870c-37838072e9d1",
+ CellID->114737056],
+Cell[12069, 305, 2538, 50, 70, "DefinitionBox",ExpressionUUID->"4e704845-11a6-4750-8348-23724e6d7445",
+ CellID->96629475],
+Cell[14610, 357, 227, 7, 70, "Caption",ExpressionUUID->"fae4ade9-8d53-4864-9d20-4bbeebc9f097",
+ CellID->8138014],
+Cell[14840, 366, 3148, 66, 70, "DefinitionBox",ExpressionUUID->"d2d318de-faea-40dc-9d40-ab9a9d6f4844",
+ CellID->13751234],
+Cell[17991, 434, 228, 7, 70, "Caption",ExpressionUUID->"ff3da3e7-c46c-4809-94aa-a2fde54cea0d",
+ CellID->216751024],
+Cell[18222, 443, 2474, 48, 70, "DefinitionBox",ExpressionUUID->"47713631-ba7e-4c7e-bb97-5c06f3424cd9",
+ CellID->327053652],
+Cell[20699, 493, 221, 7, 70, "Caption",ExpressionUUID->"d3f2aac0-cdac-4e7c-96c0-3330c956a1c8",
+ CellID->287495618],
+Cell[20923, 502, 2709, 52, 70, "DefinitionBox",ExpressionUUID->"c7d9670d-3268-4ba6-a945-533c61700a3f",
+ CellID->285585198],
+Cell[23635, 556, 226, 7, 70, "Caption",ExpressionUUID->"54645e03-118b-4d61-a588-994035e914ca",
+ CellID->609780990],
+Cell[23864, 565, 4311, 84, 70, "DefinitionBox",ExpressionUUID->"a637fd10-ac38-48b1-8d99-693064e7a02d",
+ CellID->217214885],
+Cell[28178, 651, 230, 9, 70, "Caption",ExpressionUUID->"c95528ee-1a73-4d6c-9c29-577e09ba65fc",
+ CellID->500291650]
+}, Open  ]],
+Cell[28423, 663, 23, 0, 70, "FooterCell",ExpressionUUID->"40c0e2e2-2ff5-4ecc-a1de-33681ad04ee0"]
+}
+]
+*)
+
+(* End of internal cache information *)

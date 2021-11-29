@@ -1,0 +1,435 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     17328,        427]
+NotebookOptionsPosition[     15629,        392]
+NotebookOutlinePosition[     16024,        408]
+CellTagsIndexPosition[     15981,        405]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"Import", "[", 
+  "\"\<https://raw.githubusercontent.com/spacemathproject/SpaceMath/stable/\
+SpaceMath/Install.m\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.838847328258051*^9, 3.838847328261623*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"8e4c1371-212d-4422-9d0e-0708fd68dd27"],
+
+Cell[BoxData[
+ RowBox[{"InstallSpaceMath", "[", "]"}]], "Input",ExpressionUUID->"01758e42-ab8b-4e21-a5d6-ad51c478dc83"],
+
+Cell[BoxData[
+ RowBox[{"<<", "SpaceMath`", 
+  RowBox[{"(*", " ", 
+   RowBox[{"<", 
+    RowBox[{
+     RowBox[{"--", 
+      RowBox[{"--", 
+       RowBox[{"--", 
+        RowBox[{"--", "Con"}]}]}]}], " ", "esta", " ", "instrucci\[OAcute]n", 
+     " ", "se", " ", "carga", " ", "SpaceMath"}]}], " ", "*)"}]}]], "Input",
+ CellChangeTimes->{{3.838848273684967*^9, 3.8388483000165863`*^9}, {
+  3.838849067764427*^9, 
+  3.8388491122911453`*^9}},ExpressionUUID->"d3a2f366-c41e-4e00-a7a4-\
+74c97d615264"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"?", "UpperLimit"}]], "Input",
+ CellChangeTimes->{{3.838848552486874*^9, 3.8388485568866787`*^9}},
+ CellLabel->"In[5]:=",ExpressionUUID->"6c9c0078-762e-4f2f-8dc0-47abe1bf63d0"],
+
+Cell[BoxData[
+ InterpretationBox[
+  StyleBox[
+   FrameBox[
+    DynamicModuleBox[{System`InformationDump`open$$ = False, 
+     System`InformationDump`mouseOver$$ = False}, 
+     PaneSelectorBox[{True->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
+             StripOnInput->False,
+             BaseStyle -> None],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            
+            StyleBox["\<\"UpperLimit[\[Mu]_, \[Sigma]_, CL_, x1_, x2_]-> This \
+command evaluates the upper bound for a given mean (\[Mu]), standard \
+deviation (\[Sigma]), and Confidence Level (CL) \\\\\\n\[Mu] indicates the \
+mean of the population, \[Sigma] is the standard deviation of the population, \
+CL is the Confidence Level (in percent), x1 for an upper limit is \
+specifically '-Infinity' and finally x2 is the same as mu.\"\>", 
+             "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          PaneBox[GridBox[{
+             {
+              
+              DynamicModuleBox[{System`InformationDump`open$$ = {
+               False, False, False, False, False, False, False, False, False, 
+                False, False, False}}, 
+               StyleBox[GridBox[{
+                  {
+                   TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Definitions\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"Definitions\"",
+                    TooltipStyle->"TextStyling"],
+                    Annotation[#, "Definitions", "Tooltip"]& ], GridBox[{
+                    {
+                    RowBox[{
+                    RowBox[{"UpperLimit", "[", 
+                    RowBox[{
+                    "SpaceMath`UPLimits`Private`\[Mu]_", ",", 
+                    "SpaceMath`UPLimits`Private`\[Sigma]_", ",", "CL_", ",", 
+                    "SpaceMath`UPLimits`Private`x1_", ",", 
+                    "SpaceMath`UPLimits`Private`x2_"}], "]"}], ":=", 
+                    RowBox[{"FUpperLimit", "[", 
+                    RowBox[{
+                    "SpaceMath`UPLimits`Private`\[Mu]", ",", 
+                    "SpaceMath`UPLimits`Private`\[Sigma]", ",", "CL", ",", 
+                    "SpaceMath`UPLimits`Private`x1", ",", 
+                    "SpaceMath`UPLimits`Private`x2"}], "]"}]}]}
+                    },
+                    DefaultBaseStyle->"Column",
+                    GridBoxAlignment->{"Columns" -> {{Left}}},
+                    
+                    GridBoxItemSize->{
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}]},
+                  {
+                   TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Full Name\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"FullName\"",
+                    TooltipStyle->"TextStyling"],
+                    
+                    Annotation[#, "FullName", 
+                    "Tooltip"]& ], "\<\"SpaceMath`UpperLimit\"\>"}
+                 },
+                 AutoDelete->False,
+                 GridBoxAlignment->{"Columns" -> {Right, Left}},
+                 GridBoxDividers->None,
+                 GridBoxItemSize->{"Columns" -> {Automatic, Automatic}},
+                 GridBoxSpacings->{"Columns" -> {
+                    Offset[0.27999999999999997`], {
+                    Offset[0.5599999999999999]}, 
+                    Offset[0.27999999999999997`]}, "Rows" -> {
+                    Offset[0.2], {
+                    Offset[0.8]}, 
+                    Offset[0.2]}}], "DialogStyle",
+                StripOnInput->False],
+               DynamicModuleValues:>{}]}
+            },
+            DefaultBaseStyle->"Column",
+            GridBoxAlignment->{"Columns" -> {{Left}}},
+            GridBoxDividers->{"Columns" -> {{False}}, "Rows" -> {{False}}},
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+            GridBoxSpacings->{"Columns" -> {
+                Offset[0.27999999999999997`], {
+                 Offset[0.5599999999999999]}, 
+                Offset[0.27999999999999997`]}, "Rows" -> {
+                Offset[0.2], {
+                 Offset[3.6]}, 
+                Offset[0.2]}}],
+           FrameMargins->6], ""},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpener"]], True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpenerHot"]]}, Dynamic[
+              System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, False],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          GrayLevel[0.8], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"], False->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
+             StripOnInput->False],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            
+            StyleBox["\<\"UpperLimit[\[Mu]_, \[Sigma]_, CL_, x1_, x2_]-> This \
+command evaluates the upper bound for a given mean (\[Mu]), standard \
+deviation (\[Sigma]), and Confidence Level (CL) \\\\\\n\[Mu] indicates the \
+mean of the population, \[Sigma] is the standard deviation of the population, \
+CL is the Confidence Level (in percent), x1 for an upper limit is \
+specifically '-Infinity' and finally x2 is the same as mu.\"\>", 
+             "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpener"],
+               ImageSizeCache->{10., {3., 7.}}], True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpenerHot"],
+               ImageSizeCache->{10., {3., 7.}}]}, Dynamic[
+              System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, True],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          GrayLevel[0.8], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"]}, Dynamic[System`InformationDump`open$$],
+      BaselinePosition->Baseline,
+      FrameMargins->0,
+      ImageSize->Automatic],
+     DynamicModuleValues:>{}],
+    BaseStyle->"InformationGridFrame",
+    StripOnInput->False], "InformationGridPlain",
+   StripOnInput->False],
+  InformationData[
+   Association[
+   "ObjectType" -> "Symbol", "Usage" -> 
+    "UpperLimit[\[Mu]_, \[Sigma]_, CL_, x1_, x2_]-> This command evaluates \
+the upper bound for a given mean (\[Mu]), standard deviation (\[Sigma]), and \
+Confidence Level (CL) \\\n\[Mu] indicates the mean of the population, \
+\[Sigma] is the standard deviation of the population, CL is the Confidence \
+Level (in percent), x1 for an upper limit is specifically '-Infinity' and \
+finally x2 is the same as mu.", "Documentation" -> None, "OwnValues" -> None, 
+    "UpValues" -> None, "DownValues" -> 
+    Information`InformationValueForm[
+     DownValues, SpaceMath`UpperLimit, {SpaceMath`UpperLimit[
+         Pattern[SpaceMath`UPLimits`Private`\[Mu], 
+          Blank[]], 
+         Pattern[SpaceMath`UPLimits`Private`\[Sigma], 
+          Blank[]], 
+         Pattern[SpaceMath`CL, 
+          Blank[]], 
+         Pattern[SpaceMath`UPLimits`Private`x1, 
+          Blank[]], 
+         Pattern[SpaceMath`UPLimits`Private`x2, 
+          Blank[]]] :> 
+       SpaceMath`FUpperLimit[
+        SpaceMath`UPLimits`Private`\[Mu], SpaceMath`UPLimits`Private`\[Sigma],
+          SpaceMath`CL, SpaceMath`UPLimits`Private`x1, 
+         SpaceMath`UPLimits`Private`x2]}], "SubValues" -> None, 
+    "DefaultValues" -> None, "NValues" -> None, "FormatValues" -> None, 
+    "Options" -> None, "Attributes" -> {}, "FullName" -> 
+    "SpaceMath`UpperLimit"], False]]], "Output",
+ CellChangeTimes->{3.838848558797182*^9},
+ CellLabel->"Out[5]=",ExpressionUUID->"eee337b5-e412-4b10-a6c9-c93b6c73115e"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{"Z", "\[Rule]", " ", "e\[Mu]"}], "*)"}]], "Input",
+ CellChangeTimes->{{3.8388483573528547`*^9, 3.838848358439164*^9}, {
+  3.838848413815976*^9, 3.838848415875091*^9}, {3.8388484774146223`*^9, 
+  3.838848479483519*^9}},ExpressionUUID->"ea971425-a17c-4167-9490-\
+fcaf97d6badd"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"UpperLimit", "[", 
+  RowBox[{"7.5", ",", "1.96", ",", "95", ",", 
+   RowBox[{"-", "Infinity"}], ",", "7.5"}], "]"}]], "Input",
+ CellLabel->"In[5]:=",ExpressionUUID->"9161ae78-681a-4376-a094-27318fc5da59"],
+
+Cell[BoxData["0.4241348882954468`"], "Output",
+ CellChangeTimes->{3.8388491928533707`*^9},
+ CellLabel->"Out[5]=",ExpressionUUID->"8e3fa0fa-bd49-4f3a-a202-d0bc419c3b0b"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{"Z", "\[Rule]", " ", "e\[Tau]"}], "*)"}]], "Input",
+ CellChangeTimes->{{3.8388483573528547`*^9, 3.838848358439164*^9}, {
+  3.838848413815976*^9, 3.838848415875091*^9}, {3.8388484774146223`*^9, 
+  3.838848490112938*^9}},ExpressionUUID->"ceb2ce0a-a7e3-4ca1-a8c3-\
+db920c1df54b"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"UpperLimit", "[", 
+  RowBox[{"9.8", ",", "1.96", ",", "95", ",", 
+   RowBox[{"-", "Infinity"}], ",", "9.8"}], "]"}]], "Input",
+ CellChangeTimes->{{3.83884850178578*^9, 3.838848510169293*^9}},
+ CellLabel->"In[6]:=",ExpressionUUID->"108b2e95-40c3-4201-aab8-b36615119896"],
+
+Cell[BoxData["0.4012936743170763`"], "Output",
+ CellChangeTimes->{3.838849195406707*^9},
+ CellLabel->"Out[6]=",ExpressionUUID->"faf06af2-5e81-4739-8686-f16eb263d637"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{"Z", "\[Rule]", " ", "\[Mu]\[Tau]"}], "*)"}]], "Input",
+ CellChangeTimes->{{3.8388483573528547`*^9, 3.838848358439164*^9}, {
+  3.838848413815976*^9, 3.838848415875091*^9}, {3.8388484774146223`*^9, 
+  3.838848490112938*^9}, {3.838848523863956*^9, 
+  3.8388485246932793`*^9}},ExpressionUUID->"a2dc975f-859f-4a58-9225-\
+51cb86598354"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"UpperLimit", "[", 
+  RowBox[{"1.2", ",", "1.96", ",", "95", ",", 
+   RowBox[{"-", "Infinity"}], ",", "1.2"}], "]"}]], "Input",
+ CellChangeTimes->{{3.83884850178578*^9, 3.8388485418717613`*^9}, 
+   3.8388492031469307`*^9},
+ CellLabel->"In[8]:=",ExpressionUUID->"6e6782e3-2cbc-4a49-bba2-25fb5316077c"],
+
+Cell[BoxData["0.4877893883554188`"], "Output",
+ CellChangeTimes->{{3.838849198957733*^9, 3.838849204203507*^9}},
+ CellLabel->"Out[8]=",ExpressionUUID->"5ab3af02-6718-41e1-a85a-788f6316912d"]
+}, Open  ]]
+},
+WindowSize->{1108.8, 605.4},
+WindowMargins->{{0, Automatic}, {0, Automatic}},
+FrontEndVersion->"12.1 para Linux x86 (64-bit) (March 18, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"5937568d-8bed-4fd7-bf12-79f11a9491a1"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 302, 5, 46, "Input",ExpressionUUID->"8e4c1371-212d-4422-9d0e-0708fd68dd27"],
+Cell[863, 27, 119, 1, 29, "Input",ExpressionUUID->"01758e42-ab8b-4e21-a5d6-ad51c478dc83"],
+Cell[985, 30, 493, 13, 29, "Input",ExpressionUUID->"d3a2f366-c41e-4e00-a7a4-74c97d615264"],
+Cell[CellGroupData[{
+Cell[1503, 47, 199, 3, 29, "Input",ExpressionUUID->"6c9c0078-762e-4f2f-8dc0-47abe1bf63d0"],
+Cell[1705, 52, 11409, 270, 137, "Output",ExpressionUUID->"eee337b5-e412-4b10-a6c9-c93b6c73115e"]
+}, Open  ]],
+Cell[13129, 325, 315, 6, 29, "Input",ExpressionUUID->"ea971425-a17c-4167-9490-fcaf97d6badd"],
+Cell[CellGroupData[{
+Cell[13469, 335, 228, 4, 46, "Input",ExpressionUUID->"9161ae78-681a-4376-a094-27318fc5da59"],
+Cell[13700, 341, 168, 2, 33, "Output",ExpressionUUID->"8e3fa0fa-bd49-4f3a-a202-d0bc419c3b0b"]
+}, Open  ]],
+Cell[13883, 346, 316, 6, 29, "Input",ExpressionUUID->"ceb2ce0a-a7e3-4ca1-a8c3-db920c1df54b"],
+Cell[CellGroupData[{
+Cell[14224, 356, 293, 5, 46, "Input",ExpressionUUID->"108b2e95-40c3-4201-aab8-b36615119896"],
+Cell[14520, 363, 166, 2, 33, "Output",ExpressionUUID->"faf06af2-5e81-4739-8686-f16eb263d637"]
+}, Open  ]],
+Cell[14701, 368, 371, 7, 29, "Input",ExpressionUUID->"a2dc975f-859f-4a58-9225-51cb86598354"],
+Cell[CellGroupData[{
+Cell[15097, 379, 323, 6, 46, "Input",ExpressionUUID->"6e6782e3-2cbc-4a49-bba2-25fb5316077c"],
+Cell[15423, 387, 190, 2, 56, "Output",ExpressionUUID->"5ab3af02-6718-41e1-a85a-788f6316912d"]
+}, Open  ]]
+}
+]
+*)
+

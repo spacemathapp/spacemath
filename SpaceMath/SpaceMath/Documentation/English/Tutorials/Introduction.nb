@@ -1,0 +1,300 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      9742,        291]
+NotebookOptionsPosition[      6021,        208]
+NotebookOutlinePosition[      8523,        269]
+CellTagsIndexPosition[      8480,        266]
+WindowTitle->Introduction
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {Cell["SPACE MATH TUTORIAL", "PacletNameCell"], Cell[TextData[Cell[BoxData[
+    
+     ActionMenuBox[
+      FrameBox[
+       InterpretationBox[Cell[TextData[{
+         "URL",
+         StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+          StripOnInput->False]
+        }]],
+        TextCell[
+         Row[{"URL", 
+           Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+       StripOnInput->False], {"\<\"SpaceMath/tutorial/Introduction\"\>":>
+      None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+      Module[{DocumentationSearch`Private`nb$}, 
+       DocumentationSearch`Private`nb$ = NotebookPut[
+          Notebook[{
+            Cell["SpaceMath/tutorial/Introduction"]}, Visible -> False]]; 
+       SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+       FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+       NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+      Delimiter, "\<\"Copy web URL\"\>":>
+      Module[{DocumentationSearch`Private`nb$}, 
+       DocumentationSearch`Private`nb$ = NotebookPut[
+          Notebook[{
+            Cell[
+             BoxData[
+              MakeBoxes[
+               Hyperlink[
+               "http://reference.wolfram.com/language/SpaceMath/tutorial/\
+Introduction.html"], StandardForm]], "Input", TextClipboardType -> 
+             "PlainText"]}, Visible -> False]]; 
+       SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+       FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+       NotebookClose[DocumentationSearch`Private`nb$]; 
+       Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+        NotebookLocate[{
+          URL[
+           StringJoin[
+            If[
+             TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$20785], 
+             "http://reference.wolfram.com/system-modeler/", 
+             "http://reference.wolfram.com/language/"], 
+            "SpaceMath/tutorial/Introduction", ".html"]], None}]}]},
+      Appearance->None,
+      MenuAppearance->Automatic,
+      MenuStyle->"URLMenu"]],
+     LineSpacing->{1.4, 0}]], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1],
+
+Cell[CellGroupData[{
+
+Cell["Introduction", "Title",
+ CellID->509267359],
+
+Cell["\<\
+The physical observables implemented in SpaceMath are the following:\
+\>", "Text",
+ CellID->372540451],
+
+Cell["", "Text",
+ CellID->326694845],
+
+Cell[TextData[{
+ "1. Higgs boson data    \n\t(a) Higgs boson coupling modifiers ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[Kappa]", 
+    StyleBox["i", "TI"]], TraditionalForm]], "InlineFormula"],
+ "   \n\t(b) Signal strength modifiers ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["R", 
+    StyleBox["X", "TI"]], TraditionalForm]], "InlineFormula"],
+ "   \n2. Meson physics    \n\t(a) ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox["B", "TI"], TraditionalForm]], "InlineFormula"],
+ " meson decays \n\t(b)",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    RowBox[{" ", "D"}], "TI"], TraditionalForm]], "InlineFormula"],
+ " meson decays \n\t(c) ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    StyleBox["B", "TI"], "-", 
+    OverscriptBox[
+     StyleBox["B", "TI"], "_"]}], TraditionalForm]], "InlineFormula"],
+ " mixing \n\t(d) ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    StyleBox["K", "TI"], "-", 
+    OverscriptBox[
+     StyleBox["K", "TI"], "_"]}], TraditionalForm]], "InlineFormula"],
+ " mixing \n\t(e) ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    StyleBox["D", "TI"], "-", 
+    OverscriptBox[
+     StyleBox["D", "TI"], "_"]}], TraditionalForm]], "InlineFormula"],
+ " mixing \n3. Flavor\[Hyphen]violanting processes "
+}], "Text",
+ CellID->1537123131],
+
+Cell[TextData[{
+ "\t(a) Muon anomalous magnetic dipole moment ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["a", "\[Mu]"], TraditionalForm]]]
+}], "Text",
+ CellID->679624785],
+
+Cell[TextData[{
+ "\t(b) Muon electric dipole moment ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["d", "\[Mu]"], TraditionalForm]]]
+}], "Text",
+ CellID->615650895],
+
+Cell[TextData[{
+ "\t(c) Radiative processes ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["l", "i"], " ", "\[Rule]", " ", 
+    RowBox[{
+     SubscriptBox["l", "j"], "\[Gamma]"}]}], TraditionalForm]]]
+}], "Text",
+ CellID->35597431],
+
+Cell[TextData[{
+ "\t(d) ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["l", "i"], " ", "\[Rule]", " ", 
+    RowBox[{
+     SubscriptBox["l", "j"], 
+     SubscriptBox["l", "j"], 
+     SubscriptBox["l", "k"]}]}], TraditionalForm]]],
+ " decays"
+}], "Text",
+ CellID->29728507],
+
+Cell["\<\
+\t(e) etc 
+4. Oblique parameters 
+5. Unitariety and perturbativity\
+\>", "Text",
+ CellID->24428652],
+
+Cell[TextData[{
+ "However, in ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox["SpaceMath", "MR"], TraditionalForm]], "InlineFormula"],
+ " v1.0 only LHC-HMD is enabled. In addition, ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox["SpaceMath", "MR"], TraditionalForm]], "InlineFormula"],
+ " v1.0 is able to evaluate branching ratios of the SM\[Hyphen]like Higgs \
+boson, ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox["CP", "TI"], TraditionalForm]], "InlineFormula"],
+ "\[Hyphen]odd and ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox["CP", "TI"], TraditionalForm]], "InlineFormula"],
+ "\[Hyphen]even scalars.  "
+}], "Text",
+ CellID->179312628]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"Introduction",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "TutorialColor", 
+  "LinkTrails" -> GridBox[{{
+      RowBox[{
+        ButtonBox[
+        "SpaceMath", ButtonData -> "paclet:SpaceMath/guide/SpaceMath", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}}, ColumnAlignments -> 
+    Left], "ExampleCounter" -> 1, "NeedPlatMsgIn" -> None, "RootCaptions" -> 
+  "", "Metadata" -> {
+   "built" -> "{2020, 10, 7, 13, 33, 41.7193547}", 
+    "history" -> {"1.0", "", "", ""}, "context" -> "SpaceMath`", 
+    "keywords" -> {}, "specialkeywords" -> {}, 
+    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "Space Math Tutorial", "language" -> "en", "paclet" -> "SpaceMath", 
+    "status" -> "None", "summary" -> 
+    "The physical observables implemented in SpaceMath are the following: 1. \
+Higgs boson data (a) Higgs boson coupling modifiers \[Kappa]_i (b) Signal \
+strength modifiers R_X 2. Meson physics (a) B meson decays (b) D meson decays \
+(c) B-OverscriptBox[StyleBox[B, TI], _] mixing (d) \
+K-OverscriptBox[StyleBox[K, TI], _] mixing (e) D-OverscriptBox[StyleBox[D, \
+TI], _] mixing 3. Flavor-violanting processes ", "synonyms" -> {}, 
+    "tabletags" -> DocumentationBuild`Make`Private`tabletaggingrules$20734, 
+    "title" -> "Introduction", "titlemodifier" -> "", "windowtitle" -> 
+    "Introduction", "type" -> "Tutorial", "uri" -> 
+    "SpaceMath/tutorial/Introduction"}},
+FrontEndVersion->"12.0 for Microsoft Windows (64-bit) (April 8, 2019)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> Notebook], 
+   Cell[
+    StyleData["Output"], CellContext -> Notebook], 
+   Cell[
+    StyleData["TutorialMoreAboutSection"], 
+    CellGroupingRules -> {"SectionGrouping", 30}], 
+   Cell[
+    StyleData["RelatedTutorialsSection"], 
+    CellGroupingRules -> {"SectionGrouping", 30}], 
+   Cell[
+    StyleData["TutorialRelatedLinksSection"], 
+    CellGroupingRules -> {"SectionGrouping", 30}]}, Visible -> False, 
+  FrontEndVersion -> "12.0 for Microsoft Windows (64-bit) (April 8, 2019)", 
+  StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[584, 21, 2321, 54, 70, "AnchorBarGrid",ExpressionUUID->"0f4ff5bf-a448-4ac9-8612-7ea41e514941",
+ CellID->1],
+Cell[CellGroupData[{
+Cell[2930, 79, 49, 1, 70, "Title",ExpressionUUID->"c9039b3e-e09f-470e-99f8-244678fc8d91",
+ CellID->509267359],
+Cell[2982, 82, 112, 3, 70, "Text",ExpressionUUID->"0dae63b6-7464-4b84-a0f3-e8f6aaaca55f",
+ CellID->372540451],
+Cell[3097, 87, 36, 1, 70, "Text",ExpressionUUID->"a6f7ee06-3a0c-4057-8679-e7efc7043d49",
+ CellID->326694845],
+Cell[3136, 90, 1243, 43, 70, "Text",ExpressionUUID->"780da17c-da1c-49ff-80b3-cb1fc40aa24c",
+ CellID->1537123131],
+Cell[4382, 135, 172, 6, 70, "Text",ExpressionUUID->"a0e793f8-7b14-471d-96fc-144ec4915d0a",
+ CellID->679624785],
+Cell[4557, 143, 162, 6, 70, "Text",ExpressionUUID->"4e603912-6967-453c-8912-21f0ba5c53f2",
+ CellID->615650895],
+Cell[4722, 151, 242, 9, 70, "Text",ExpressionUUID->"606112fa-645d-4463-ad26-c87322d6e3b2",
+ CellID->35597431],
+Cell[4967, 162, 282, 12, 70, "Text",ExpressionUUID->"546b2e88-c891-4037-9c24-680cb5cef270",
+ CellID->29728507],
+Cell[5252, 176, 109, 5, 70, "Text",ExpressionUUID->"dbbc87de-6cf6-493d-b49a-0c9f61f3d26d",
+ CellID->24428652],
+Cell[5364, 183, 615, 20, 70, "Text",ExpressionUUID->"c31a14d3-9417-4be0-8480-a1e03a4c998d",
+ CellID->179312628]
+}, Open  ]],
+Cell[5994, 206, 23, 0, 70, "FooterCell",ExpressionUUID->"07891dd7-2fe1-4bfe-ae77-a1ac7205382c"]
+}
+]
+*)
+
+(* End of internal cache information *)

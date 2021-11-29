@@ -1,0 +1,528 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     16424,        519]
+NotebookOptionsPosition[     12897,        442]
+NotebookOutlinePosition[     15508,        503]
+CellTagsIndexPosition[     15465,        500]
+WindowTitle->Higgs boson coupling modifiers \:03BA_i 
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {Cell["SPACE MATH TUTORIAL", "PacletNameCell"], Cell[TextData[Cell[BoxData[
+    
+     ActionMenuBox[
+      FrameBox[
+       InterpretationBox[Cell[TextData[{
+         "URL",
+         StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+          StripOnInput->False]
+        }]],
+        TextCell[
+         Row[{"URL", 
+           Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+       StripOnInput->False], {"\<\"SpaceMath/tutorial/HiggsBosonCoupling\"\>":>
+      None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+      Module[{DocumentationSearch`Private`nb$}, 
+       DocumentationSearch`Private`nb$ = NotebookPut[
+          Notebook[{
+            Cell["SpaceMath/tutorial/HiggsBosonCoupling"]}, Visible -> 
+           False]]; SelectionMove[
+        DocumentationSearch`Private`nb$, All, Notebook]; 
+       FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+       NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+      Delimiter, "\<\"Copy web URL\"\>":>
+      Module[{DocumentationSearch`Private`nb$}, 
+       DocumentationSearch`Private`nb$ = NotebookPut[
+          Notebook[{
+            Cell[
+             BoxData[
+              MakeBoxes[
+               Hyperlink[
+               "http://reference.wolfram.com/language/SpaceMath/tutorial/\
+HiggsBosonCoupling.html"], StandardForm]], "Input", TextClipboardType -> 
+             "PlainText"]}, Visible -> False]]; 
+       SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+       FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+       NotebookClose[DocumentationSearch`Private`nb$]; 
+       Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+        NotebookLocate[{
+          URL[
+           StringJoin[
+            If[
+             TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$19793], 
+             "http://reference.wolfram.com/system-modeler/", 
+             "http://reference.wolfram.com/language/"], 
+            "SpaceMath/tutorial/HiggsBosonCoupling", ".html"]], None}]}]},
+      Appearance->None,
+      MenuAppearance->Automatic,
+      MenuStyle->"URLMenu"]],
+     LineSpacing->{1.4, 0}]], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Higgs boson coupling modifiers ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[Kappa]", 
+    StyleBox["i", "TI"]], TraditionalForm]], "InlineFormula"],
+ " "
+}], "Title",
+ CellID->509267359],
+
+Cell[TextData[{
+ "The coupling modifiers ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[Kappa]", 
+    StyleBox["i", "TI"]], TraditionalForm]], "InlineFormula"],
+ ", are introduced to quantify the deviations of the SM\[Hyphen]like Higgs \
+boson to other particles. The coupling modifiers ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[Kappa]", 
+    StyleBox["i", "TI"]], TraditionalForm]], "InlineFormula"],
+ ", for a production cross section or a decay mode, are defined as follows: "
+}], "Text",
+ CellID->1534169418],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubsuperscriptBox["\[Kappa]", "pp", "2"], "\[LongEqual]", 
+    FractionBox[
+     RowBox[{"\[Sigma]", "(", 
+      RowBox[{
+       StyleBox["p", "TI"], 
+       StyleBox["p", "TI"], "\[Rule]", 
+       StyleBox["h", "TI"]}], ")"}], 
+     RowBox[{"\[Sigma]", "(", 
+      RowBox[{
+       StyleBox["p", "TI"], 
+       StyleBox["p", "TI"], "\[Rule]", 
+       SuperscriptBox[
+        StyleBox["h", "TI"], 
+        StyleBox[
+         RowBox[{"S", "M"}], "TI"]]}], ")"}]], " "}], TraditionalForm]], 
+  "NumberedEquation"],
+ "\tor \t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubsuperscriptBox["\[Kappa]", "X", "2"], "\[LongEqual]", 
+    FractionBox[
+     RowBox[{"\[CapitalGamma]", "(", 
+      RowBox[{
+       StyleBox["h", "TI"], "\[Rule]", "X"}], ")"}], 
+     RowBox[{"\[CapitalGamma]", "(", 
+      RowBox[{
+       SuperscriptBox[
+        StyleBox["h", "TI"], 
+        StyleBox[
+         RowBox[{"S", "M"}], "TI"]], "\[Rule]", "X"}], ")"}]], "."}], 
+   TraditionalForm]], "NumberedEquation"]
+}], "Text",
+ TextAlignment->Center,
+ CellID->1091089461],
+
+Cell["", "Text",
+ CellID->721973767],
+
+Cell[TextData[{
+ "We consider tree\[Hyphen]level Higgs boson couplings to different \
+particles, i.e., ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox[
+    StyleBox["g", "TI"], 
+    RowBox[{
+     StyleBox["h", "TI"], 
+     StyleBox["Z", "TI"], 
+     SuperscriptBox[
+      StyleBox["Z", "TI"], "*"]}]], TraditionalForm]], "InlineFormula"],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox[
+    StyleBox["g", "TI"], 
+    RowBox[{
+     StyleBox["h", "TI"], 
+     StyleBox["W", "TI"], 
+     SuperscriptBox[
+      StyleBox["W", "TI"], "*"]}]], TraditionalForm]], "InlineFormula"],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox[
+    StyleBox["g", "TI"], 
+    RowBox[{
+     StyleBox["h", "TI"], 
+     SuperscriptBox["\[Tau]", "-"], 
+     SuperscriptBox["\[Tau]", "+"]}]], TraditionalForm]], "InlineFormula"],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox[
+    StyleBox["g", "TI"], 
+    RowBox[{
+     StyleBox["h", "TI"], 
+     SuperscriptBox["\[Mu]", "-"], 
+     SuperscriptBox["\[Mu]", "+"]}]], TraditionalForm]], "InlineFormula"],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox[
+    StyleBox["g", "TI"], 
+    RowBox[{
+     StyleBox["h", "TI"], 
+     StyleBox["b", "TI"], 
+     OverscriptBox[
+      StyleBox["b", "TI"], "_"]}]], TraditionalForm]], "InlineFormula"],
+ ", as well as effective coupling modifiers ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox[
+    StyleBox["g", "TI"], 
+    StyleBox["hgg", "TI"]], TraditionalForm]], "InlineFormula"],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox[
+    StyleBox["g", "TI"], 
+    StyleBox[
+     RowBox[{
+      StyleBox["h", "TI"], "\[Gamma]\[Gamma]"}]]], TraditionalForm]], 
+  "InlineFormula"],
+ " which describe gluon fusion production ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox["ggh", "MR"], TraditionalForm]], "InlineFormula"],
+ " and the ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    StyleBox["h", "TI"], "\[Rule]", "\[Gamma]\[Gamma]"}], TraditionalForm]], 
+  "InlineFormula"],
+ " decay, respectively. The next table shows the best fit, at ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"1", "\[Sigma]"}], TraditionalForm]], "InlineFormula"],
+ ", on the coupling modifiers, ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[Kappa]", 
+    StyleBox["i", "TI"]], TraditionalForm]], "InlineFormula"],
+ ".  "
+}], "Text",
+ CellID->1297181699],
+
+Cell[BoxData[GridBox[{
+   {
+    RowBox[{"Signal", " ", "strength", 
+     FormBox[
+      SubscriptBox[
+       StyleBox["R", "TI"], 
+       StyleBox["x", "TI"]],
+      TraditionalForm]}], "    ", Cell["\<\
+
+\
+\>", "TableText"]},
+   {"Parameter", 
+    RowBox[{"Best", " ", "fit", " ", "value"}], Cell[
+    "Uncertainty stat.      Uncertainty syst", "TableText"]},
+   {
+    FormBox[
+     SubscriptBox["\[Kappa]", 
+      StyleBox["Z", "TI"]],
+     TraditionalForm], 
+    FormBox[
+     SubsuperscriptBox["1.00", 
+      RowBox[{"-", "0.11"}], 
+      RowBox[{"+", "0.11"}]],
+     TraditionalForm], 
+    RowBox[{" ", 
+     RowBox[{
+      FormBox[
+       SubsuperscriptBox["\[Null]", 
+        RowBox[{"-", "0.09"}], 
+        RowBox[{"+", "0.09"}]],
+       TraditionalForm], "                              ", 
+      FormBox[
+       RowBox[{
+        SubsuperscriptBox["\[Null]", 
+         RowBox[{"-", "0.07"}], 
+         RowBox[{"+", "0.06"}]], " "}],
+       TraditionalForm]}]}]},
+   {
+    RowBox[{
+     FormBox[
+      FormBox[
+       TemplateBox[{RowBox[{
+           SubscriptBox["\[Kappa]", 
+            StyleBox["W", "TI"]]}]},
+        "Abs"],
+       TraditionalForm],
+      TraditionalForm], "\n", 
+     FormBox[
+      FormBox[
+       RowBox[{
+        SubscriptBox["\[Kappa]", 
+         StyleBox["t", "TI"]], " "}],
+       TraditionalForm],
+      TraditionalForm], "\n", 
+     FormBox[
+      FormBox[
+       SubscriptBox["\[Kappa]", "\[Tau]"],
+       TraditionalForm],
+      TraditionalForm], "\n", 
+     FormBox[
+      FormBox[
+       SubscriptBox["\[Kappa]", 
+        StyleBox["b", "TI"]],
+       TraditionalForm],
+      TraditionalForm], "\n", 
+     FormBox[
+      SubscriptBox["\[Kappa]", 
+       StyleBox["g", "TI"]],
+      TraditionalForm], "\n", 
+     FormBox[
+      SubscriptBox["\[Kappa]", "\[Gamma]"],
+      TraditionalForm]}], 
+    RowBox[{
+     FormBox[
+      FormBox[
+       SubsuperscriptBox["1.13", 
+        RowBox[{"-", "0.13"}], 
+        RowBox[{"+", "0.16"}]],
+       TraditionalForm],
+      TraditionalForm], "\n", 
+     FormBox[
+      FormBox[
+       SubsuperscriptBox["0.98", 
+        RowBox[{"-", "0.14"}], 
+        RowBox[{"+", "0.14"}]],
+       TraditionalForm],
+      TraditionalForm], "\n", 
+     FormBox[
+      SubsuperscriptBox["1.02", 
+       RowBox[{"-", "0.17"}], 
+       RowBox[{"+", "0.17"}]],
+      TraditionalForm], "\n", 
+     FormBox[
+      SubsuperscriptBox["1.17", 
+       RowBox[{"-", "0.31"}], 
+       RowBox[{"+", "0.27"}]],
+      TraditionalForm], "\n", 
+     FormBox[
+      SubsuperscriptBox["1.18", 
+       RowBox[{"-", "0.14"}], 
+       RowBox[{"+", "0.16"}]],
+      TraditionalForm], "\n", 
+     FormBox[
+      SubsuperscriptBox["1.07", 
+       RowBox[{"-", "0.15"}], 
+       RowBox[{"+", "0.14"}]],
+      TraditionalForm]}], Cell[TextData[{
+     Cell[BoxData[
+      FormBox[
+       SubsuperscriptBox["\[Null]", 
+        RowBox[{"-", "0.10"}], 
+        RowBox[{"+", "0.15"}]], TraditionalForm]], "InlineFormula"],
+     "                               ",
+     Cell[BoxData[
+      FormBox[
+       RowBox[{
+        SubsuperscriptBox["\[Null]", 
+         RowBox[{"-", "0.08"}], 
+         RowBox[{"+", "0.06"}]], " "}], TraditionalForm]], "InlineFormula"],
+     " \n",
+     Cell[BoxData[
+      FormBox[
+       SubsuperscriptBox["\[Null]", 
+        RowBox[{"-", "0.08"}], 
+        RowBox[{"+", "0.08"}]], TraditionalForm]], "InlineFormula"],
+     "                               ",
+     Cell[BoxData[
+      FormBox[
+       SubsuperscriptBox["\[Null]", 
+        RowBox[{"-", "0.11"}], 
+        RowBox[{"+", "0.12"}]], TraditionalForm]], "InlineFormula"],
+     " \n",
+     Cell[BoxData[
+      FormBox[
+       SubsuperscriptBox["\[Null]", 
+        RowBox[{"-", "0.13"}], 
+        RowBox[{"+", "0.11"}]], TraditionalForm]], "InlineFormula"],
+     "                               ",
+     Cell[BoxData[
+      FormBox[
+       RowBox[{
+        SubsuperscriptBox["\[Null]", 
+         RowBox[{"-", "0.10"}], 
+         RowBox[{"+", "0.12"}]], " "}], TraditionalForm]], "InlineFormula"],
+     " \n",
+     Cell[BoxData[
+      FormBox[
+       SubsuperscriptBox["\[Null]", 
+        RowBox[{"-", "0.29"}], 
+        RowBox[{"+", "0.18"}]], TraditionalForm]], "InlineFormula"],
+     "                               ",
+     Cell[BoxData[
+      FormBox[
+       RowBox[{
+        SubsuperscriptBox["\[Null]", 
+         RowBox[{"-", "0.10"}], 
+         RowBox[{"+", "0.20"}]], " "}], TraditionalForm]], "InlineFormula"],
+     " \n",
+     Cell[BoxData[
+      FormBox[
+       SubsuperscriptBox["\[Null]", 
+        RowBox[{"-", "0.09"}], 
+        RowBox[{"+", "0.10"}]], TraditionalForm]], "InlineFormula"],
+     "                               ",
+     Cell[BoxData[
+      FormBox[
+       SubsuperscriptBox["\[Null]", 
+        RowBox[{"-", "0.10"}], 
+        RowBox[{"+", "0.12"}]], TraditionalForm]], "InlineFormula"],
+     " \n",
+     Cell[BoxData[
+      FormBox[
+       SubsuperscriptBox["\[Null]", 
+        RowBox[{"-", "0.14"}], 
+        RowBox[{"+", "0.10"}]], TraditionalForm]], "InlineFormula"],
+     "                               ",
+     Cell[BoxData[
+      FormBox[
+       SubsuperscriptBox["\[Null]", 
+        RowBox[{"-", "0.05"}], 
+        RowBox[{"+", "0.09"}]], TraditionalForm]], "InlineFormula"],
+     " "
+    }], "TableText"]}
+  }]], "DefinitionBox3Col",
+ CellFrame->{{0, 0}, {0, 2}},
+ CellID->1750955192],
+
+Cell[TextData[{
+ "Best fit value and ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[PlusMinus]", "1", "\[Sigma]"}], TraditionalForm]], 
+  "InlineFormula"],
+ " uncertainties for the Higgs boson coupling modifiers ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[Kappa]", 
+    StyleBox["i", "TI"]], TraditionalForm]], "InlineFormula"],
+ ". "
+}], "Caption",
+ CellID->1570155392]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"Higgs boson coupling modifiers \[Kappa]_i ",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "TutorialColor", 
+  "LinkTrails" -> GridBox[{{
+      RowBox[{
+        ButtonBox[
+        "SpaceMath", ButtonData -> "paclet:SpaceMath/guide/SpaceMath", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}}, ColumnAlignments -> 
+    Left], "ExampleCounter" -> 1, "NeedPlatMsgIn" -> None, "RootCaptions" -> 
+  "", "Metadata" -> {
+   "built" -> "{2020, 10, 7, 13, 33, 36.1249663}", 
+    "history" -> {"1.0", "", "", ""}, "context" -> "SpaceMath`", 
+    "keywords" -> {}, "specialkeywords" -> {}, 
+    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "Space Math Tutorial", "language" -> "en", "paclet" -> "SpaceMath", 
+    "status" -> "None", "summary" -> 
+    "The coupling modifiers \[Kappa]_i, are introduced to quantify the \
+deviations of the SM-like Higgs boson to other particles. The coupling \
+modifiers \[Kappa]_i, for a production cross section or a decay mode, are \
+defined as follows: \[Kappa]_pp^2\[LongEqual] ( \[Sigma](pp\[Rule]h) ) / ( \
+\[Sigma](pp\[Rule]h^SM) ) or \[Kappa]_X^2\[LongEqual] ( \[CapitalGamma](h\
+\[Rule]X) ) / ( \[CapitalGamma](h^SM\[Rule]X) ) . ", "synonyms" -> {}, 
+    "tabletags" -> DocumentationBuild`Make`Private`tabletaggingrules$19737, 
+    "title" -> "Higgs boson coupling modifiers \[Kappa]_i ", "titlemodifier" -> 
+    "", "windowtitle" -> "Higgs boson coupling modifiers \[Kappa]_i ", "type" -> 
+    "Tutorial", "uri" -> "SpaceMath/tutorial/HiggsBosonCoupling"}},
+FrontEndVersion->"12.0 for Microsoft Windows (64-bit) (April 8, 2019)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> Notebook], 
+   Cell[
+    StyleData["Output"], CellContext -> Notebook], 
+   Cell[
+    StyleData["TutorialMoreAboutSection"], 
+    CellGroupingRules -> {"SectionGrouping", 30}], 
+   Cell[
+    StyleData["RelatedTutorialsSection"], 
+    CellGroupingRules -> {"SectionGrouping", 30}], 
+   Cell[
+    StyleData["TutorialRelatedLinksSection"], 
+    CellGroupingRules -> {"SectionGrouping", 30}]}, Visible -> False, 
+  FrontEndVersion -> "12.0 for Microsoft Windows (64-bit) (April 8, 2019)", 
+  StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[612, 21, 2358, 55, 70, "AnchorBarGrid",ExpressionUUID->"f01d0426-85c2-4a0a-8c8a-7972fcbc7da7",
+ CellID->1],
+Cell[CellGroupData[{
+Cell[2995, 80, 207, 8, 70, "Title",ExpressionUUID->"ed525615-a963-48d1-9cf4-5b6d6423d1f2",
+ CellID->509267359],
+Cell[3205, 90, 519, 14, 70, "Text",ExpressionUUID->"53897b37-8a4c-4819-b584-e5359dbc4ce8",
+ CellID->1534169418],
+Cell[3727, 106, 1099, 38, 70, "Text",ExpressionUUID->"090cab7a-adf9-4ec8-86fb-66c9859244cb",
+ CellID->1091089461],
+Cell[4829, 146, 36, 1, 70, "Text",ExpressionUUID->"4b4cac70-873f-44d0-9044-d4df947e300f",
+ CellID->721973767],
+Cell[4868, 149, 2277, 86, 70, "Text",ExpressionUUID->"ed27f1cb-918b-43d9-a395-66801fef9062",
+ CellID->1297181699],
+Cell[7148, 237, 5334, 185, 70, "DefinitionBox3Col",ExpressionUUID->"50559f26-190b-46d0-b21c-fe49fa9e3f1e",
+ CellID->1750955192],
+Cell[12485, 424, 370, 13, 70, "Caption",ExpressionUUID->"da542945-0cc1-4bb8-bdc1-d3ccb881a876",
+ CellID->1570155392]
+}, Open  ]],
+Cell[12870, 440, 23, 0, 70, "FooterCell",ExpressionUUID->"1aad3da3-cb04-4924-9705-96358a93c8d6"]
+}
+]
+*)
+
+(* End of internal cache information *)
