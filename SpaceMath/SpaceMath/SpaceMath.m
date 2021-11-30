@@ -95,7 +95,7 @@ listObliquePar = FileNames[{"*.m"},ToFileName[{$SpaceMathDirectory,"ObliquePar"}
 listValues = FileNames[{"*.m"},ToFileName[{$SpaceMathDirectory,"Values"}]];
 listMisc = FileNames[{"*.m"},ToFileName[{$SpaceMathDirectory,"Miscellaneous"}]];
 listLimits = FileNames[{"*.m"},ToFileName[{$SpaceMathDirectory,"Limits"}]];
-listChiSquare = FileNames[{"*.m"},ToFileName[{$SpaceMathDirectory,"Chi-Square"}]];
+listChiSquare = FileNames[{"*.m"},ToFileName[{$SpaceMathDirectory,"ChiSquare"}]];
 
 AppendTo[$ContextPath, "SpaceMath`Package`"];
 
