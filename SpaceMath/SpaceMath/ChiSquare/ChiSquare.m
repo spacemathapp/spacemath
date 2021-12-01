@@ -28,10 +28,10 @@ Chi2Rx[ghtt_, ghbb_, ghtautau_, ghZZ_, ghWW_, gCH_,
 
 (************************************************************************************************************************************************************************************************************************************************************************************************************************)
 
-Chi2Rx95[ghtt_, ghbb_, ghtautau_, ghZZ_, ghWW_, gCH_, mCH_, Cab_,tb_] := 
+Chi2Rx95[ghtt_, ghbb_, ghtautau_, ghZZ_, ghWW_, gCH_, mCH_, Cba_,tb_] := 
  RegionPlot[
   Chi2Rx[ghtt, ghbb, ghtautau, ghZZ, ghWW, 0, 2000] < 
-   11.070, {Cab, -1, 1}, {tb, 0.1, 50}(*,PlotPoints\[Rule]500*), 
+   11.070, {Cba, -1, 1}, {tb, 0.1, 50}(*,PlotPoints\[Rule]500*), 
   PlotStyle -> Blue, Frame -> True, 
    FrameLabel -> {Style["cos(\[Beta]-\[Alpha])", Larger, Bold], 
        Style["tan\[Beta]", Larger, Bold]}, 
@@ -43,9 +43,9 @@ Chi2Rx95[ghtt_, ghbb_, ghtautau_, ghZZ_, ghWW_, gCH_, mCH_, Cab_,tb_] :=
   
 (**********************************************************************************************************************************************************************************************************************************************************************************************************************)  
 
-Chi2Rx68[ghtt_, ghbb_, ghtautau_, ghZZ_, ghWW_, gCH_, mCH_, Cab_,tb_] := 
+Chi2Rx68[ghtt_, ghbb_, ghtautau_, ghZZ_, ghWW_, gCH_, mCH_, Cba_,tb_] := 
  RegionPlot[
-  Chi2Rx[ghtt, ghbb, ghtautau, ghZZ, ghWW, 0, 2000] < 3.53, {Cab, -1, 
+  Chi2Rx[ghtt, ghbb, ghtautau, ghZZ, ghWW, 0, 2000] < 3.53, {Cba, -1, 
    1}, {tb, 0.1, 50}, PlotPoints -> 100, PlotStyle -> Green, 
   Frame -> True, 
    FrameLabel -> {Style["cos(\[Beta]-\[Alpha])", Larger, Bold], 
