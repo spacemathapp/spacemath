@@ -305,7 +305,7 @@ for indicates the X axis label (Y axis label). The arguments xfor (yfor), xformi
 (*****************************************************************************************************************************************************)
 
 (******************************************************************************************************************************************************)
-(*********************************************************End OF RXIntersection************************************************************************************)
+(*********************************************************Begin OF RXIntersection************************************************************************************)
 (*****************************************************************************************************************************************************)
 RXintersection::usage="RXintersection[ghtt_, ghbb_,ghZZ_,ghWW_,ghtautau_,gCH_,mCH_,x_,y_,xmin_,xmax_,ymin_,ymax_,xlabel_,ylabel_,xfor_,yfor_,xformin_,xformax_,xforstep_,yformin_,yformax_,yforstep_,PP_]\[Rule] 
 This command evaluates the intersection of all signal strengths, \
@@ -441,6 +441,13 @@ dataRTAUone2sig::usage ="dataRTAUone2sig"
 
 Intersection2sigRXX::usage ="Intersection2sigRXX"
 Intersection1sigRXX::usage ="Intersection1sigRXX"
+(*********************************************************************************************************************)
+RXALL1sigINT::usage ="RXALL1sigINT"
+RXALL1INT::usage ="RXALL1INT"
+RXALL2sigINT::usage ="RXALL2sigINT"
+RXALL2INT::usage ="RXALL2INT"
+RXALLINT::usage ="RXALLINT"
+(*********************************************************************************************************************)
 (* ------------------------------------------------------------------------ *)
 
 Begin["`Package`"]
@@ -1378,5 +1385,143 @@ ghtt, ghbb,ghZZ,ghWW,ghtautau,gCH,mCH,x,y,xmin,xmax,ymin,ymax,xlabel,ylabel,xfor
 Inter2sigma[
 ghtt, ghbb,ghZZ,ghWW,ghtautau,gCH,mCH,x,y,xmin,xmax,ymin,ymax,xlabel,ylabel,xfor,yfor,xformin,xformax,xforstep,yformin,yformax,yforstep,PP]
 }
+
+(*********************************************************************************************************************)
+(*********************************************************************************************************************)
+(*********************************************************************************************************************)
+RXALL1sigINT[ghtt_, ghbb_, ghZZ_, ghWW_, ghtautau_, gCH_, mCH_, x_, 
+  y_, xmin_, xmax_, ymin_, ymax_, xlabel_, ylabel_, PP_] := RegionPlot[
+  {
+     RbbINF1sig <= Rbotbot[ghtt, ghbb] <= RbbSUP1sig, 
+       RtautauINF1sig <= Rtata[ghtt, ghbb, ghtautau] <= 
+    RtautauSUP1sig, 
+      RwwINF1sig <= RWW[ghtt, ghbb, ghWW] <= RwwSUP1sig, 
+       RzzINF1sig <= RZZ[ghtt, ghbb, ghZZ] <= RzzSUP1sig, 
+     RgammagammaINF1sig <= Rgaga[ghtt, ghbb, ghWW, gCH, mCH] <= 
+    RgammagammaSUP1sig, 
+   RbbINF1sig <= Rbotbot[ghtt, ghbb] <= RbbSUP1sig && 
+        RtautauINF1sig <= Rtata[ghtt, ghbb, ghtautau] <= 
+     RtautauSUP1sig && 
+       RwwINF1sig <= RWW[ghtt, ghbb, ghWW] <= RwwSUP1sig && 
+        RzzINF1sig <= RZZ[ghtt, ghbb, ghZZ] <= RzzSUP1sig && 
+      RgammagammaINF1sig <= Rgaga[ghtt, ghbb, ghWW, gCH, mCH] <= 
+     RgammagammaSUP1sig},
+   {x, xmin, xmax}, {y, ymin, ymax}
+   , FrameLabel -> {Style["cos\[Alpha]", Larger, Bold], 
+       Style["\!\(\*SubscriptBox[\(\[Eta]\), \(L\)]\)", Larger, Bold], 
+       Style["SpaceMath", Medium, Bold]}, PlotLegends -> 
+    Placed[{ Style["\!\(\*SubscriptBox[\(R\), \(b\)]\)", Larger, 
+          Bold],
+         Style["\!\(\*SubscriptBox[\(R\), \(\[Tau]\)]\)", 
+          Larger, Bold], 
+        Style["\!\(\*SubscriptBox[\(R\), \(W\)]\)", Larger, Bold], 
+        Style["\!\(\*SubscriptBox[\(R\), \(Z\)]\)", Larger, Bold], 
+     Style["\!\(\*SubscriptBox[\(R\), \(\[Gamma]\)]\)", Larger, 
+      Bold]}, {1, 
+        0.6}], 
+   AxesLabel -> {Style["x", Larger, Bold], 
+       Style["y", Larger, Bold]}, AspectRatio -> 1, 
+   FrameStyle ->  Thickness[0.004], LabelStyle -> 35, 
+  ImageSize -> 1000,
+    GridLines -> Automatic, GridLinesStyle -> 
+      Directive[Black, 
+         Dashed], 
+  BoundaryStyle -> {1 -> Directive[Green, Dashed, Thickness[0.003]], 
+      2 -> Directive[Pink, Dashed, Thickness[0.003]], 
+      3 -> Directive[Yellow, Dashed, Thickness[0.003]], 
+      4 -> Directive[Blue, Dashed, Thickness[0.003]], 
+      5 -> Directive[Orange, Dashed, Thickness[0.003]],
+       6 -> Directive[Red, Dashed, Thickness[0.003]]},
+      PlotStyle -> {{Green, Opacity[0.3]},
+        {Pink, Opacity[0.3]}, 
+        {Yellow, Opacity[0.3]}, 
+        {Blue, Opacity[0.3]},
+         {Orange, Opacity[0.3]},
+         {Red, Opacity[1]}}
+     , PlotPoints -> PP
+  ]
+
+RXALL1INT[ghtt_, ghbb_, ghZZ_, ghWW_, ghtautau_, gCH_, mCH_, x_, y_, 
+   xmin_, xmax_, ymin_, ymax_, xlabel_, ylabel_, xfor_, yfor_, 
+   xformin_, xformax_, xforstep_, yformin_, yformax_, yforstep_, 
+   PP_] := Manipulate[
+   RXALL1sigINT[ghtt, ghbb, ghZZ, ghWW, ghtautau, gCH, mCH, x, y, 
+    xmin, xmax, ymin, ymax, xlabel, ylabel, PP], {xfor, xformin, 
+    xformax, xforstep}, {yfor, yformin, yformax, yforstep}];
+
+RXALL2sigINT[ghtt_, ghbb_, ghZZ_, ghWW_, ghtautau_, gCH_, mCH_, x_, 
+  y_, xmin_, xmax_, ymin_, ymax_, xlabel_, ylabel_, PP_] := RegionPlot[
+  {
+     RbbINF2sig <= Rbotbot[ghtt, ghbb] <= RbbSUP2sig, 
+       RtautauINF2sig <= Rtata[ghtt, ghbb, ghtautau] <= 
+    RtautauSUP2sig, 
+      RwwINF2sig <= RWW[ghtt, ghbb, ghWW] <= RwwSUP2sig, 
+       RzzINF2sig <= RZZ[ghtt, ghbb, ghZZ] <= RzzSUP2sig, 
+     RgammagammaINF2sig <= Rgaga[ghtt, ghbb, ghWW, gCH, mCH] <= 
+    RgammagammaSUP2sig, 
+   RbbINF2sig <= Rbotbot[ghtt, ghbb] <= RbbSUP2sig && 
+        RtautauINF2sig <= Rtata[ghtt, ghbb, ghtautau] <= 
+     RtautauSUP2sig && 
+       RwwINF2sig <= RWW[ghtt, ghbb, ghWW] <= RwwSUP2sig && 
+        RzzINF2sig <= RZZ[ghtt, ghbb, ghZZ] <= RzzSUP2sig && 
+      RgammagammaINF2sig <= Rgaga[ghtt, ghbb, ghWW, gCH, mCH] <= 
+     RgammagammaSUP2sig},
+   {x, xmin, xmax}, {y, ymin, ymax}
+   , FrameLabel -> {Style["cos\[Alpha]", Larger, Bold], 
+       Style["\!\(\*SubscriptBox[\(\[Eta]\), \(L\)]\)", Larger, Bold], 
+       Style["SpaceMath", Medium, Bold]}, PlotLegends -> 
+    Placed[{ Style["\!\(\*SubscriptBox[\(R\), \(b\)]\)", Larger, 
+          Bold],
+         Style["\!\(\*SubscriptBox[\(R\), \(\[Tau]\)]\)", 
+          Larger, Bold], 
+        Style["\!\(\*SubscriptBox[\(R\), \(W\)]\)", Larger, Bold], 
+        Style["\!\(\*SubscriptBox[\(R\), \(Z\)]\)", Larger, Bold], 
+     Style["\!\(\*SubscriptBox[\(R\), \(\[Gamma]\)]\)", Larger, 
+      Bold]}, {1, 
+        0.6}], 
+   AxesLabel -> {Style["x", Larger, Bold], 
+       Style["y", Larger, Bold]}, AspectRatio -> 1, 
+   FrameStyle ->  Thickness[0.004], LabelStyle -> 35, 
+  ImageSize -> 1000,
+    GridLines -> Automatic, GridLinesStyle -> 
+      Directive[Black, 
+         Dashed], 
+  BoundaryStyle -> {1 -> Directive[Green, Dashed, Thickness[0.003]], 
+      2 -> Directive[Pink, Dashed, Thickness[0.003]], 
+      3 -> Directive[Yellow, Dashed, Thickness[0.003]], 
+      4 -> Directive[Blue, Dashed, Thickness[0.003]], 
+      5 -> Directive[Orange, Dashed, Thickness[0.003]],
+       6 -> Directive[Red, Dashed, Thickness[0.003]]},
+      PlotStyle -> {{Green, Opacity[0.3]},
+        {Pink, Opacity[0.3]}, 
+        {Yellow, Opacity[0.3]}, 
+        {Blue, Opacity[0.3]},
+         {Orange, Opacity[0.3]},
+         {Red, Opacity[1]}}
+     , PlotPoints -> PP
+  ]
+
+
+RXALL2INT[ghtt_, ghbb_, ghZZ_, ghWW_, ghtautau_, gCH_, mCH_, x_, y_, 
+   xmin_, xmax_, ymin_, ymax_, xlabel_, ylabel_, xfor_, yfor_, 
+   xformin_, xformax_, xforstep_, yformin_, yformax_, yforstep_, 
+   PP_] := Manipulate[
+   RXALL2sigINT[ghtt, ghbb, ghZZ, ghWW, ghtautau, gCH, mCH, x, y, 
+    xmin, xmax, ymin, ymax, xlabel, ylabel, PP], {xfor, xformin, 
+    xformax, xforstep}, {yfor, yformin, yformax, yforstep}];
+
+RXALLINT[ghtt_, ghbb_, ghZZ_, ghWW_, ghtautau_, gCH_, mCH_, x_, y_, 
+  xmin_, xmax_, ymin_, ymax_, xlabel_, ylabel_, xfor_, yfor_, 
+  xformin_, xformax_, xforstep_, yformin_, yformax_, yforstep_, 
+  PP_] := {RXALL1INT[ghtt, ghbb, ghZZ, ghWW, ghtautau, gCH, mCH, x, y,
+    xmin, xmax, ymin, ymax, xlabel, ylabel, xfor, yfor, xformin, 
+   xformax, xforstep, yformin, yformax, yforstep, PP], 
+  RXALL2INT[ghtt, ghbb, ghZZ, ghWW, ghtautau, gCH, mCH, x, y, xmin, 
+   xmax, ymin, ymax, xlabel, ylabel, xfor, yfor, xformin, xformax, 
+   xforstep, yformin, yformax, yforstep, PP]}
+
+(*********************************************************************************************************************)
+(*********************************************************************************************************************)
+(*********************************************************************************************************************)
 
 End[]
