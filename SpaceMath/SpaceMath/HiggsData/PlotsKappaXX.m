@@ -152,10 +152,8 @@ StyleBox[\"]\",\nFontWeight->\"Bold\"]\)\[Rule] This command generates a table w
 in $UserDocumentsDirectory. "
 
 
-
 TableKBOToneX::usage="TableKBOToneX[ghbb_,x_,xmin_,xmax_,xstep_] \[Rule] This command generates a table with two columns: KBOToneX. The output file will be saved as TableKBOTone_1sigma_X.txt and TableKBOTone_2sigma_X.txt
 in $UserDocumentsDirectory."
-
 
 
 TableKGLUoneX::usage="TableKGluoneX[ghtt_,ghbb_,x_,xmin_,xmax_,xstep_] \[Rule] This command generates a table with two columns: KGLUoneX. The output file will be saved as TableKGLUone_1sigma_X.txt and TableKGLUone_2sigma_X.txt
@@ -261,7 +259,29 @@ for indicates the X axis label (Y axis label). The arguments xfor (yfor), xformi
 (*****************************************************************************************************************************************************)
 (*********************************************************End OF Kappa-ALL****************************************************************************)
 (*****************************************************************************************************************************************************)
+Intersectionkappa1sig::usage="Intersectionkappa1sig"
+InterKappa1sig::usage="InterKappa1sig"
+Intersectionkappa2sig::usage="Intersectionkappa2sig"
+InterKappa2sig::usage="InterKappa2sig"
+KappaXintersection::usage"KappaXintersection"
+KappaHLLHCall::usage"KappaHLLHCall"
+Intersectionkappa1sigHLLHC::usage="Intersectionkappa1sigHLLHC"
+InterKappa1sigHLLHC::usage="InterKappa1sigHLLHC"
+Intersectionkappa2sigHLLHC::usage="Intersectionkappa2sigHLLHC"
+InterKappa2sigHLLHC::usage="InterKappa2sigHLLHC"
+KappaXintersectionHLLHC::usage"KappaXintersectionHLLHC"
+KappaX2sigHLLHC::usage"KappaX2sigHLLHC"
+K2sigAllHLLHC::usage"K2sigAllHLLHC"
+KappaX1sigHLLHC::usage"KappaX1sigHLLHC"
+K1sigAllHLLHC::usage"K1sigAllHLLHC"
+Intersectionkappa1sigHL::usage"Intersectionkappa1sigHL"
+Intersectionkappa2sigHL::usage"Intersectionkappa2sigHL"
+InterKappa1sigHL::usage"InterKappa1sigHL"
+InterKappa2sigHL::usage"InterKappa2sigHL"
+KappaXintersectionHL::usage"KappaXintersectionHL"
 
+(*****************************************************************************************************************************************************)
+(*****************************************************************************************************************************************************)
 Begin["`Package`"]
 End[]
 
@@ -372,8 +392,8 @@ yfor,xformin,xformax,xforstep,yformin,yformax,yforstep,PP
 
 (*************************************************************************************************************************************************************************************)
 
-(*KappaALL[ghtt_, ghbb_,ghZZ_,ghWW_,ghtautau_,gCH_,mCH_,x_,y_,xmin_,xmax_,ymin_,ymax_,xlabel_,ylabel_,xfor_,
-yfor_,xformin_,xformax_,xforstep_,yformin_,yformax_,yforstep_,PP_]*)
+KappaALL[ghtt_, ghbb_,ghZZ_,ghWW_,ghtautau_,gCH_,mCH_,x_,y_,xmin_,xmax_,ymin_,ymax_,xlabel_,ylabel_,xfor_,
+yfor_,xformin_,xformax_,xforstep_,yformin_,yformax_,yforstep_,PP_]
 
 (*K2sigAll[
 ghtt[c\[Alpha],Ztt,u], ghbb[c\[Alpha],Zbb,u],ghZZ[c\[Alpha]],ghWW[c\[Alpha]],ghtautau[c\[Alpha],Ztautau,u],0,mCH,Ztt,Zbb,0,30,0,5,Ztt,Zbb,u,
@@ -447,8 +467,198 @@ Manipulate[
 Intersectionkappa2sig[ghtt, ghbb,ghZZ,ghWW,ghtautau,gCH,mCH,x,y,xmin,xmax,ymin,ymax,xlabel,ylabel,PP],
  {xfor,xformin,xformax,xforstep},{yfor,yformin,yformax,yforstep}]
  
+ KappaXintersection[ghtt_, ghbb_,ghZZ_,ghWW_,ghtautau_,gCH_,mCH_,x_,y_,xmin_,xmax_,ymin_,ymax_,xlabel_,ylabel_,xfor_,yfor_,xformin_,xformax_,xforstep_,yformin_,yformax_,yforstep_,PP_]:=
+{
+InterKappa1sig[
+ghtt, ghbb,ghZZ,ghWW,ghtautau,gCH,mCH,x,y,xmin,xmax,ymin,ymax,xlabel,ylabel,xfor,yfor,xformin,xformax,xforstep,yformin,yformax,yforstep,PP]
+,
+InterKappa2sig[
+ghtt, ghbb,ghZZ,ghWW,ghtautau,gCH,mCH,x,y,xmin,xmax,ymin,ymax,xlabel,ylabel,xfor,yfor,xformin,xformax,xforstep,yformin,yformax,yforstep,PP]
+}
 (***************************************************************************************************************************************************)
 (**********************************************************END COMAND FOR CALL FOR ALL KAPPAS*******************************************************)
 (***************************************************************************************************************************************************)
+ (***************************************************************************************************************************************************)
+(****************************************Begin All kappa's HL-LHC***********************************************************************************)
+(***************************************************************************************************************************************************)
+
+(*To 2\[Sigma]*)
+
+KappaX2sigHLLHC[ghtt_, ghbb_,ghZZ_,ghWW_,ghtautau_,gCH_,mCH_,x_,y_,
+xmin_,xmax_,ymin_,ymax_,xlabel_,ylabel_,PP_]:=
+RegionPlot[{kappaBotINF2sigHL <= kb[ghbb] <= kappaBotSUP2sigHL(*,
+kappaTopINF2sigHL<=ktop[ghtt]<=kappaTopSUP2sigHL*), 
+    kappaTauINF2sigHL <= Abs[ktau[ghtautau]] <= kappaTauSUP2sigHL, 
+   kappaWINF2sigHL<= kW[ghWW] <= kappaWSUP2sigHL, 
+    kappaZINF2sigHL<= kZ[ghZZ] <= kappaZSUP2sigHL, 
+  kappaGammaINF2sigHL <=Abs[kgaga[ghtt, ghbb, ghWW, gCH, mCH]] <=  kappaGammaSUP2sigHL,
+kappaGluonINF2sigHL<=Abs[kgluglu[ghtt,ghbb]]<=kappaGluonSUP2sigHL},
+ {x, xmin, xmax}, {y, ymin, ymax}
+ , FrameLabel -> {Style[xlabel, Larger, Bold], 
+   Style[ylabel, Larger, Bold], 
+   Style["\!\(\*
+StyleBox[\"SpaceMath\",\nFontWeight->\"Bold\",\nFontSlant->\"Italic\"]\)", Medium, Bold]}, 
+ PlotLegends -> Placed[{"\!\(\*SubscriptBox[\(\[Kappa]\), \(b\)]\)",(*
+"\!\(\*SubscriptBox[\(\[Kappa]\), \(t\)]\)",*)"\!\(\*SubscriptBox[\(\[Kappa]\), \(\[Tau]\)]\)",
+"\!\(\*SubscriptBox[\(\[Kappa]\), \(W\)]\)","\!\(\*SubscriptBox[\(\[Kappa]\), \(Z\)]\)",
+"\!\(\*SubscriptBox[\(\[Kappa]\), \(\[Gamma]\)]\)","\!\(\*SubscriptBox[\(\[Kappa]\), \(g\)]\)"}, {1,0.6}],
+ (*AxesLabel -> {Style["x", Larger, Bold], 
+   Style["y", Larger, Bold]},*)
+ FrameStyle ->  Thickness[0.004], LabelStyle -> 35,PlotPoints->PP, ImageSize -> 800,
+  GridLines -> Automatic, GridLinesStyle -> 
+   Directive[Black, 
+     Dashed], BoundaryStyle -> {1 -> Directive[Green, Dashed, Thickness[0.003]], 
+  2 -> Directive[Pink, Dashed, Thickness[0.003]], 
+  3 -> Directive[Yellow, Dashed, Thickness[0.003]], 
+  4 -> Directive[Blue, Dashed, Thickness[0.003]], 
+  5 -> Directive[Orange, Dashed, Thickness[0.003]],
+  6 -> Directive[Purple, Dashed, Thickness[0.003]],
+  7 -> Directive[Cyan, Dashed, Thickness[0.003]]}, PlotStyle -> {{Green, Opacity[0.1]}, {Pink, Opacity[0.1]}, {Yellow, 
+   Opacity[0.1]}, {Blue, Opacity[0.1]}, {Orange, Opacity[0.1]}, {Purple, Opacity[0.1]}, {Cyan, Opacity[0.1]}}, AspectRatio->1]
+
+K2sigAllHLLHC[
+ghtt_, ghbb_,ghZZ_,ghWW_,ghtautau_,gCH_,mCH_,x_,y_,xmin_,xmax_,ymin_,ymax_,xlabel_,ylabel_,xfor_,
+yfor_,xformin_,xformax_,xforstep_,yformin_,yformax_,yforstep_,PP_
+]:=Manipulate[
+KappaX2sigHLLHC[ghtt, ghbb,ghZZ,ghWW,ghtautau,gCH,mCH,x,y,xmin,xmax,ymin,ymax,xlabel,ylabel,PP],
+ {xfor,xformin,xformax,xforstep},{yfor,yformin,yformax,yforstep
+}];
+
+(*To 1\[Sigma]*)
+
+KappaX1sigHLLHC[ghtt_, ghbb_,ghZZ_,ghWW_,ghtautau_,gCH_,mCH_,x_,y_,
+xmin_,xmax_,ymin_,ymax_,xlabel_,ylabel_,PP_]:=
+RegionPlot[{kappaBotINF1sigHL <= kb[ghbb] <= kappaBotSUP1sigHL(*,
+kappaTopINF2sigHL<=ktop[ghtt]<=kappaTopSUP2sigHL*), 
+    kappaTauINF1sigHL <= Abs[ktau[ghtautau]] <= kappaTauSUP1sigHL, 
+   kappaWINF1sigHL<= kW[ghWW] <= kappaWSUP1sigHL, 
+    kappaZINF1sigHL<= kZ[ghZZ] <= kappaZSUP1sigHL, 
+  kappaGammaINF1sigHL <=Abs[kgaga[ghtt, ghbb, ghWW, gCH, mCH]] <=  kappaGammaSUP1sigHL,
+kappaGluonINF1sigHL<=Abs[kgluglu[ghtt,ghbb]]<=kappaGluonSUP1sigHL},
+ {x, xmin, xmax}, {y, ymin, ymax}
+ , FrameLabel -> {Style[xlabel, Larger, Bold], 
+   Style[ylabel, Larger, Bold], 
+   Style["\!\(\*
+StyleBox[\"SpaceMath\",\nFontWeight->\"Bold\",\nFontSlant->\"Italic\"]\)", Medium, Bold]}, 
+ PlotLegends -> Placed[{"\!\(\*SubscriptBox[\(\[Kappa]\), \(b\)]\)",(*
+"\!\(\*SubscriptBox[\(\[Kappa]\), \(t\)]\)",*)"\!\(\*SubscriptBox[\(\[Kappa]\), \(\[Tau]\)]\)",
+"\!\(\*SubscriptBox[\(\[Kappa]\), \(W\)]\)","\!\(\*SubscriptBox[\(\[Kappa]\), \(Z\)]\)",
+"\!\(\*SubscriptBox[\(\[Kappa]\), \(\[Gamma]\)]\)","\!\(\*SubscriptBox[\(\[Kappa]\), \(g\)]\)"}, {1,0.6}],
+ (*AxesLabel -> {Style["x", Larger, Bold], 
+   Style["y", Larger, Bold]},*) 
+ FrameStyle ->  Thickness[0.004], LabelStyle -> 35,PlotPoints->PP, ImageSize -> 600,
+  GridLines -> Automatic, GridLinesStyle -> 
+   Directive[Black, 
+     Dashed], BoundaryStyle -> {1 -> Directive[Green, Dashed, Thickness[0.003]], 
+  2 -> Directive[Pink, Dashed, Thickness[0.003]], 
+  3 -> Directive[Yellow, Dashed, Thickness[0.003]], 
+  4 -> Directive[Blue, Dashed, Thickness[0.003]], 
+  5 -> Directive[Orange, Dashed, Thickness[0.003]],
+  6 -> Directive[Purple, Dashed, Thickness[0.003]],
+  7 -> Directive[Cyan, Dashed, Thickness[0.003]]}, PlotStyle -> {{Green, Opacity[0.1]}, {Pink, Opacity[0.1]}, {Yellow, 
+   Opacity[0.1]}, {Blue, Opacity[0.1]}, {Orange, Opacity[0.1]}, {Purple, Opacity[0.1]}, {Cyan, Opacity[0.1]}}, AspectRatio->1]
+
+K1sigAllHLLHC[
+ghtt_, ghbb_,ghZZ_,ghWW_,ghtautau_,gCH_,mCH_,x_,y_,xmin_,xmax_,ymin_,ymax_,xlabel_,ylabel_,xfor_,
+yfor_,xformin_,xformax_,xforstep_,yformin_,yformax_,yforstep_,PP_
+]:=Manipulate[
+KappaX1sigHLLHC[ghtt, ghbb,ghZZ,ghWW,ghtautau,gCH,mCH,x,y,xmin,xmax,ymin,ymax,xlabel,ylabel,PP],
+ {xfor,xformin,xformax,xforstep},{yfor,yformin,yformax,yforstep
+}];
+
+KappaHLLHCall[ghtt_, ghbb_,ghZZ_,ghWW_,ghtautau_,gCH_,mCH_,x_,y_,xmin_,xmax_,ymin_,ymax_,xlabel_,ylabel_,xfor_,
+yfor_,xformin_,xformax_,xforstep_,yformin_,yformax_,yforstep_,PP_]:=
+{
+K1sigAllHLLHC[
+ghtt, ghbb,ghZZ,ghWW,ghtautau,gCH,mCH,x,y,xmin,xmax,ymin,ymax,xlabel,ylabel,xfor,
+yfor,xformin,xformax,xforstep,yformin,yformax,yforstep,PP
+],
+K2sigAllHLLHC[
+ghtt, ghbb,ghZZ,ghWW,ghtautau,gCH,mCH,x,y,xmin,xmax,ymin,ymax,xlabel,ylabel,xfor,
+yfor,xformin,xformax,xforstep,yformin,yformax,yforstep,PP
+]
+}
+
+(*************************************************************************************************************************************************************************************)
+
+KappaHLLHCall[ghtt_, ghbb_,ghZZ_,ghWW_,ghtautau_,gCH_,mCH_,x_,y_,xmin_,xmax_,ymin_,ymax_,xlabel_,ylabel_,xfor_,
+yfor_,xformin_,xformax_,xforstep_,yformin_,yformax_,yforstep_,PP_]
+
+(***************************************************************************************************************************************************)
+(****************************************End All kappa's HL-LHC*************************************************************************************)
+(***************************************************************************************************************************************************)
+(***************************************************************************************************************************************************)
+(*****************************************************BEGIN COMAND FOR CALL FOR ALL KAPPAS HL-LHC***************************************************)
+(***************************************************************************************************************************************************)
+
+(*COMAND FOR CALL FOR ALL KAPPAS *)
+
+Intersection;
+
+(*To 1\[Sigma]*)
+
+Intersectionkappa1sigHL[ghtt_, ghbb_,ghZZ_,ghWW_,ghtautau_,gCH_,mCH_,x_,y_,xmin_,xmax_,ymin_,ymax_,xlabel_,ylabel_,PP_]:=RegionPlot[
+{kappaBotINF1sigHL <= kb[ghbb] <= kappaBotSUP1sigHL&&
+kappaTopINF1sigHL<=ktop[ghtt]<=kappaTopSUP1sigHL&& 
+    kappaTauINF1sigHL <= ktau[ghtautau] <= kappaTauSUP1sigHL&& 
+   kappaWINF1sigHL<= kW[ghWW] <= kappaWSUP1sigHL&& 
+    kappaZINF1sigHL<= kZ[ghZZ] <= kappaZSUP1sigHL&& 
+  kappaGammaINF1sigHL <= kgaga[ghtt, ghbb, ghWW, gCH, mCH] <= kappaGammaSUP1sigHL&&
+kappaGluonINF1sigHL<=kgluglu[ghtt,ghbb]<=kappaGluonSUP1sigHL},
+ {x, xmin, xmax}, {y, ymin, ymax}
+ ,PlotPoints->PP, FrameLabel -> {Style[xlabel, Larger, Bold], 
+   Style[ylabel, Larger, Bold], 
+   Style["\!\(\*
+StyleBox[\"SpaceMath\",\nFontWeight->\"Bold\",\nFontSlant->\"Italic\"]\)", Larger, Bold]}, 
+ PlotLegends -> Placed[{"Intersection"}, {0.8,0.6}],
+ (*AxesLabel -> {Style["x", Larger, Bold], 
+   Style["y", Larger, Bold]},*) 
+ FrameStyle ->  Thickness[0.004], LabelStyle -> 35, ImageSize -> 1000,(*PlotPoints->500,*)
+  GridLines -> Automatic, GridLinesStyle -> 
+   Directive[Black, 
+     Dashed], BoundaryStyle -> {1 -> Directive[Orange, Dashed, Thickness[0.003]]}, PlotStyle -> {{Orange, Opacity[0.3]}}, AspectRatio->1]
+
+InterKappa1sigHL[ghtt_, ghbb_,ghZZ_,ghWW_,ghtautau_,gCH_,mCH_,x_,y_,xmin_,xmax_,ymin_,ymax_,xlabel_,ylabel_,xfor_,yfor_,xformin_,xformax_,xforstep_,yformin_,yformax_,yforstep_,PP_]:=
+Manipulate[
+Intersectionkappa1sigHL[ghtt, ghbb,ghZZ,ghWW,ghtautau,gCH,mCH,x,y,xmin,xmax,ymin,ymax,xlabel,ylabel,PP],
+ {xfor,xformin,xformax,xforstep},{yfor,yformin,yformax,yforstep}]
+
+(*To 2\[Sigma]*)
+
+Intersectionkappa2sigHL[ghtt_, ghbb_,ghZZ_,ghWW_,ghtautau_,gCH_,mCH_,x_,y_,xmin_,xmax_,ymin_,ymax_,xlabel_,ylabel_,PP_]:=RegionPlot[
+{kappaBotINF2sigHL <= kb[ghbb] <= kappaBotSUP2sigHL&&
+    kappaTauINF2sigHL <= ktau[ghtautau] <= kappaTauSUP2sigHL&& 
+   kappaWINF2sigHL<= kW[ghWW] <= kappaWSUP2sigHL&& 
+    kappaZINF2sigHL<= kZ[ghZZ] <= kappaZSUP2sigHL&& 
+  kappaGammaINF2sigHL <= kgaga[ghtt, ghbb, ghWW, gCH, mCH] <= kappaGammaSUP2sigHL&&
+kappaGluonINF2sigHL<=kgluglu[ghtt,ghbb]<=kappaGluonSUP2sigHL},
+ {x, xmin, xmax}, {y, ymin, ymax}
+,PlotPoints->PP , FrameLabel -> {Style[xlabel, Larger, Bold], 
+   Style[ylabel, Larger, Bold], 
+   Style["\!\(\*
+StyleBox[\"SpaceMath\",\nFontWeight->\"Bold\",\nFontSlant->\"Italic\"]\)", Larger, Bold]}, 
+ PlotLegends -> Placed[{"Intersection"}, {0.8,0.6}],
+ (*AxesLabel -> {Style["x", Larger, Bold], 
+   Style["y", Larger, Bold]},*)
+ FrameStyle ->  Thickness[0.004], LabelStyle -> 35, ImageSize -> 600,
+  GridLines -> Automatic, GridLinesStyle -> 
+   Directive[Black, 
+     Dashed], BoundaryStyle -> {1 -> Directive[Purple, Dashed, Thickness[0.003]]}, PlotStyle -> {{Purple, Opacity[0.3]}}, AspectRatio->1]
+
+InterKappa2sigHL[ghtt_, ghbb_,ghZZ_,ghWW_,ghtautau_,gCH_,mCH_,x_,y_,xmin_,xmax_,ymin_,ymax_,xlabel_,ylabel_,xfor_,yfor_,xformin_,xformax_,xforstep_,yformin_,yformax_,yforstep_,PP_]:=
+Manipulate[
+Intersectionkappa2sigHL[ghtt, ghbb,ghZZ,ghWW,ghtautau,gCH,mCH,x,y,xmin,xmax,ymin,ymax,xlabel,ylabel,PP],
+ {xfor,xformin,xformax,xforstep},{yfor,yformin,yformax,yforstep}]
  
+ KappaXintersectionHL[ghtt_, ghbb_,ghZZ_,ghWW_,ghtautau_,gCH_,mCH_,x_,y_,xmin_,xmax_,ymin_,ymax_,xlabel_,ylabel_,xfor_,yfor_,xformin_,xformax_,xforstep_,yformin_,yformax_,yforstep_,PP_]:=
+{
+InterKappa1sigHL[
+ghtt, ghbb,ghZZ,ghWW,ghtautau,gCH,mCH,x,y,xmin,xmax,ymin,ymax,xlabel,ylabel,xfor,yfor,xformin,xformax,xforstep,yformin,yformax,yforstep,PP]
+,
+InterKappa2sigHL[
+ghtt, ghbb,ghZZ,ghWW,ghtautau,gCH,mCH,x,y,xmin,xmax,ymin,ymax,xlabel,ylabel,xfor,yfor,xformin,xformax,xforstep,yformin,yformax,yforstep,PP]
+}
+(***************************************************************************************************************************************************)
+(**********************************************************END COMAND FOR CALL FOR ALL KAPPAS HL-LHC************************************************)
+(***************************************************************************************************************************************************)
  End[]
