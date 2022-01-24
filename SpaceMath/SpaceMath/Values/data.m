@@ -80,7 +80,32 @@ RzzSUP1sig::usage="RzzSUP1sig"
 RzzINF1sig::usage="RzzINF1sig"
 RgammagammaINF1sig::usage="RgammagammaINF1sig"
 RgammagammaSUP1sig::usage="RgammagammaSUP1sig"
+(***********************************************************************************************)
+(*Projection for Signal Strengths at HL-LHC to 1 sigma, taken from arXiv:1902.00134v2[hep-ph]*)
+(*Signal Strengths to 1\[Sigma]*)
+RbbSUP1sigHL::usage="RbbSUP1sigHL"
+RbbINF1sigHL::usage="RbbINF1sigHL"
+RtautauSUP1sigHL::usage="RtautauSUP1sigHL"
+RtautauINF1sigHL::usage="RtautauINF1sigHL"
+RwwSUP1sigHL::usage="RwwSUP1sigHL"
+RwwINF1sigHL::usage="RwwINF1sigHL"
+RzzSUP1sigHL::usage="RzzSUP1sigHL"
+RzzINF1sigHL::usage="RzzINF1sigHL"
+RgammagammaINF1sigHL::usage="RgammagammaINF1sigHL"
+RgammagammaSUP1sigHL::usage="RgammagammaSUP1sigHL"
 
+(*Signal Strengths to 1\[Sigma]*) (*ONLY TEST*)
+RbbSUP2sigHL::usage="RbbSUP2sigHL"
+RbbINF2sigHL::usage="RbbINF2sigHL"
+RtautauSUP2sigHL::usage="RtautauSUP2sigHL"
+RtautauINF2sigHL::usage="RtautauINF2sigHL"
+RwwSUP2sigHL::usage="RwwSUP2sigHL"
+RwwINF2sigHL::usage="RwwINF2sigHL"
+RzzSUP2sigHL::usage="RzzSUP2sigHL"
+RzzINF2sigHL::usage="RzzINF2sigHL"
+RgammagammaINF2sigHL::usage="RgammagammaINF2sigHL"
+RgammagammaSUP2sigHL::usage="RgammagammaSUP2sigHL"  
+(***********************************************************************************************)
 (*kappa-parametrization*)
 (*central values*)
 kappaZ::usage="kappaZ"
@@ -308,6 +333,33 @@ RzzSUP1sig=1.30504;
 RzzINF1sig=1.07496;
 RgammagammaINF1sig=1.00496;
 RgammagammaSUP1sig=1.19504;
+
+(***********************************************************************************************)
+(*Projection for Signal Strengths at HL-LHC to 1 sigma, taken from arXiv:1902.00134v2[hep-ph]*)
+(*Signal Strengths to 1\[Sigma]*)
+RbbSUP1sigHL=0.992;
+RbbINF1sigHL=0.908;
+RtautauSUP1sigHL=1.043;
+RtautauINF1sigHL=0.997;
+RwwSUP1sigHL=1.027;
+RwwINF1sigHL=0.993;
+RzzSUP1sigHL=1.027;
+RzzINF1sigHL=0.993;
+RgammagammaSUP1sigHL=0.116;
+RgammagammaINF1sigHL=-0.016;
+
+(*Signal Strengths to 2\[Sigma]*) (*Only for test*)
+RbbSUP2sigHL=0.992;
+RbbINF2sigHL=0.908;
+RtautauSUP2sigHL=1.043;
+RtautauINF2sigHL=0.997;
+RwwSUP2sigHL=1.027;
+RwwINF2sigHL=0.993;
+RzzSUP2sigHL=1.027;
+RzzINF2sigHL=0.993;
+RgammagammaSUP2sigHL=0.116;
+RgammagammaINF2sigHL=-0.016;
+(***********************************************************************************************)
 
 (*kappa-parametrization*)
 (*central values*)
