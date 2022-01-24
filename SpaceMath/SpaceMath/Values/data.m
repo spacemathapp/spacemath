@@ -318,8 +318,8 @@ RwwSUP2sig=1.4202;
 RwwINF2sig=0.739804;
 RzzSUP2sig=1.42007;
 RzzINF2sig=0.959928;
-RgammagammaINF2sig=0.909912;
 RgammagammaSUP2sig=1.29009;
+RgammagammaINF2sig=0.909912;
 
 (*Signal Strengths to 1\[Sigma]*)
 (*Reference: ARXIV:1809.10733*)
@@ -331,8 +331,8 @@ RwwSUP1sig=1.2501;
 RwwINF1sig=0.909902;
 RzzSUP1sig=1.30504;
 RzzINF1sig=1.07496;
-RgammagammaINF1sig=1.00496;
 RgammagammaSUP1sig=1.19504;
+RgammagammaINF1sig=1.00496;
 
 (***********************************************************************************************)
 (*Projection for Signal Strengths at HL-LHC to 1 sigma, taken from arXiv:1902.00134v2[hep-ph]*)
@@ -345,8 +345,8 @@ RwwSUP1sigHL=1.027;
 RwwINF1sigHL=0.993;
 RzzSUP1sigHL=1.027;
 RzzINF1sigHL=0.993;
-RgammagammaSUP1sigHL=0.116;
-RgammagammaINF1sigHL=-0.016;
+RgammagammaSUP1sigHL=1.19504;(*0.116;*)
+RgammagammaINF1sigHL=1.00496(*-0.016;*)
 
 (*Signal Strengths to 2\[Sigma]*) (*Only for test*)
 RbbSUP2sigHL=0.992;
