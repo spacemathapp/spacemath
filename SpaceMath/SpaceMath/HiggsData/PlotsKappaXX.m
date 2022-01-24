@@ -280,6 +280,12 @@ InterKappa1sigHL::usage"InterKappa1sigHL"
 InterKappa2sigHL::usage"InterKappa2sigHL"
 KappaXintersectionHL::usage"KappaXintersectionHL"
 
+KXALL1INT::usage"KXALL1INT"
+KXALL2INT::usage"KXALL2INT"
+KXALL1sigINT::usage"KXALL1sigINT"
+KXALL2sigINT::usage"KXALL2sigINT"
+KXALLINT::usage"KXALLINT"
+
 (*****************************************************************************************************************************************************)
 (*****************************************************************************************************************************************************)
 Begin["`Package`"]
@@ -637,5 +643,139 @@ ghtt, ghbb,ghZZ,ghWW,ghtautau,gCH,mCH,x,y,xmin,xmax,ymin,ymax,xlabel,ylabel,xfor
 }
 (***************************************************************************************************************************************************)
 (**********************************************************END COMAND FOR CALL FOR ALL KAPPAS HL-LHC************************************************)
+(***************************************************************************************************************************************************)
+
+(***************************************************************************************************************************************************)
+(***************************************************************************************************************************************************)
+(***************************************************************************************************************************************************)
+KXALL1sigINT[ghtt_, ghbb_, ghZZ_, ghWW_, ghtautau_, gCH_, mCH_, x_, 
+  y_, xmin_, xmax_, ymin_, ymax_, xlabel_, ylabel_, PP_] := RegionPlot[
+  {
+     kappaBotINF1sig <= kb[ghbb] <= kappaBotSUP1sig, 
+       kappaTauINF1sig <= ktau[ghtautau] <= kappaTauSUP1sig, 
+      kappaWINF1sig <= kW[ghWW] <= kappaWSUP1sig, 
+       kappaZINF1sig <= kZ[ghZZ] <= kappaZSUP1sig, 
+     kappaGammaINF1sig <= kgaga[ghtt, ghbb, ghWW, gCH, mCH] <= 
+    kappaGammaSUP1sig,
+   kappaBotINF1sig <= kb[ghbb] <= kappaBotSUP1sig && 
+        kappaTauINF1sig <=  ktau[ghtautau] <= kappaTauSUP1sig && 
+       kappaWINF1sig <= kW[ghWW] <= kappaWSUP1sig && 
+        kappaZINF1sig <= kZ[ghZZ] <= kappaZSUP1sig && 
+      kappaGammaINF1sig <= kgaga[ghtt, ghbb, ghWW, gCH, mCH] <= 
+     kappaGammaSUP1sig},
+   {x, xmin, xmax}, {y, ymin, ymax}
+   , FrameLabel -> {Style["cos\[Alpha]", Larger, Bold], 
+       Style["\!\(\*SubscriptBox[\(\[Eta]\), \(L\)]\)", Larger, Bold], 
+       Style["SpaceMath", Medium, Bold]}, PlotLegends -> 
+    Placed[{ Style["\!\(\*SubscriptBox[\(R\), \(b\)]\)", Larger, 
+          Bold],
+         Style["\!\(\*SubscriptBox[\(R\), \(\[Tau]\)]\)", 
+          Larger, Bold], 
+        Style["\!\(\*SubscriptBox[\(R\), \(W\)]\)", Larger, Bold], 
+        Style["\!\(\*SubscriptBox[\(R\), \(Z\)]\)", Larger, Bold], 
+     Style["\!\(\*SubscriptBox[\(R\), \(\[Gamma]\)]\)", Larger, 
+      Bold]}, {1, 
+        0.6}], 
+   AxesLabel -> {Style["x", Larger, Bold], 
+       Style["y", Larger, Bold]}, AspectRatio -> 1, 
+   FrameStyle ->  Thickness[0.004], LabelStyle -> 35, 
+  ImageSize -> 1000,
+    GridLines -> Automatic, GridLinesStyle -> 
+      Directive[Black, 
+         Dashed], 
+  BoundaryStyle -> {1 -> Directive[Green, Dashed, Thickness[0.003]], 
+      2 -> Directive[Pink, Dashed, Thickness[0.003]], 
+      3 -> Directive[Yellow, Dashed, Thickness[0.003]], 
+      4 -> Directive[Blue, Dashed, Thickness[0.003]], 
+      5 -> Directive[Orange, Dashed, Thickness[0.003]],
+       6 -> Directive[Red, Dashed, Thickness[0.003]]},
+      PlotStyle -> {{Green, Opacity[0.3]},
+        {Pink, Opacity[0.3]}, 
+        {Yellow, Opacity[0.3]}, 
+        {Blue, Opacity[0.3]},
+         {Orange, Opacity[0.3]},
+         {Red, Opacity[1]}}
+     , PlotPoints -> PP
+  ]
+
+KXALL1INT[ghtt_, ghbb_, ghZZ_, ghWW_, ghtautau_, gCH_, mCH_, x_, y_, 
+   xmin_, xmax_, ymin_, ymax_, xlabel_, ylabel_, xfor_, yfor_, 
+   xformin_, xformax_, xforstep_, yformin_, yformax_, yforstep_, 
+   PP_] := Manipulate[
+   KXALL1sigINT[ghtt, ghbb, ghZZ, ghWW, ghtautau, gCH, mCH, x, y, 
+    xmin, xmax, ymin, ymax, xlabel, ylabel, PP], {xfor, xformin, 
+    xformax, xforstep}, {yfor, yformin, yformax, yforstep}];
+
+KXALL2sigINT[ghtt_, ghbb_, ghZZ_, ghWW_, ghtautau_, gCH_, mCH_, x_, 
+  y_, xmin_, xmax_, ymin_, ymax_, xlabel_, ylabel_, PP_] := RegionPlot[
+  {
+     kappaBotINF1sig <= kb[ghbb] <= kappaBotSUP1sig, 
+       kappaTauINF1sig <= ktau[ghtautau] <= kappaTauSUP1sig, 
+      kappaWINF1sig <= kW[ghWW] <= kappaWSUP1sig, 
+       kappaZINF1sig <= kZ[ghZZ] <= kappaZSUP1sig, 
+     kappaGammaINF1sig <= kgaga[ghtt, ghbb, ghWW, gCH, mCH] <= 
+    kappaGammaSUP1sig,
+   kappaBotINF1sig <= kb[ghbb] <= kappaBotSUP1sig && 
+        kappaTauINF1sig <=  ktau[ghtautau] <= kappaTauSUP1sig && 
+       kappaWINF1sig <= kW[ghWW] <= kappaWSUP1sig && 
+        kappaZINF1sig <= kZ[ghZZ] <= kappaZSUP1sig && 
+      kappaGammaINF1sig <= kgaga[ghtt, ghbb, ghWW, gCH, mCH] <= 
+     kappaGammaSUP1sig},
+   {x, xmin, xmax}, {y, ymin, ymax}
+   , FrameLabel -> {Style["cos\[Alpha]", Larger, Bold], 
+       Style["\!\(\*SubscriptBox[\(\[Eta]\), \(L\)]\)", Larger, Bold], 
+       Style["SpaceMath", Medium, Bold]}, PlotLegends -> 
+    Placed[{ Style["\!\(\*SubscriptBox[\(R\), \(b\)]\)", Larger, 
+          Bold],
+         Style["\!\(\*SubscriptBox[\(R\), \(\[Tau]\)]\)", 
+          Larger, Bold], 
+        Style["\!\(\*SubscriptBox[\(R\), \(W\)]\)", Larger, Bold], 
+        Style["\!\(\*SubscriptBox[\(R\), \(Z\)]\)", Larger, Bold], 
+     Style["\!\(\*SubscriptBox[\(R\), \(\[Gamma]\)]\)", Larger, 
+      Bold]}, {1, 
+        0.6}], 
+   AxesLabel -> {Style["x", Larger, Bold], 
+       Style["y", Larger, Bold]}, AspectRatio -> 1, 
+   FrameStyle ->  Thickness[0.004], LabelStyle -> 35, 
+  ImageSize -> 1000,
+    GridLines -> Automatic, GridLinesStyle -> 
+      Directive[Black, 
+         Dashed], 
+  BoundaryStyle -> {1 -> Directive[Green, Dashed, Thickness[0.003]], 
+      2 -> Directive[Pink, Dashed, Thickness[0.003]], 
+      3 -> Directive[Yellow, Dashed, Thickness[0.003]], 
+      4 -> Directive[Blue, Dashed, Thickness[0.003]], 
+      5 -> Directive[Orange, Dashed, Thickness[0.003]],
+       6 -> Directive[Red, Dashed, Thickness[0.003]]},
+      PlotStyle -> {{Green, Opacity[0.3]},
+        {Pink, Opacity[0.3]}, 
+        {Yellow, Opacity[0.3]}, 
+        {Blue, Opacity[0.3]},
+         {Orange, Opacity[0.3]},
+         {Red, Opacity[1]}}
+     , PlotPoints -> PP
+  ]
+
+
+KXALL2INT[ghtt_, ghbb_, ghZZ_, ghWW_, ghtautau_, gCH_, mCH_, x_, y_, 
+   xmin_, xmax_, ymin_, ymax_, xlabel_, ylabel_, xfor_, yfor_, 
+   xformin_, xformax_, xforstep_, yformin_, yformax_, yforstep_, 
+   PP_] := Manipulate[
+   KXALL2sigINT[ghtt, ghbb, ghZZ, ghWW, ghtautau, gCH, mCH, x, y, 
+    xmin, xmax, ymin, ymax, xlabel, ylabel, PP], {xfor, xformin, 
+    xformax, xforstep}, {yfor, yformin, yformax, yforstep}];
+
+KXALLINT[ghtt_, ghbb_, ghZZ_, ghWW_, ghtautau_, gCH_, mCH_, x_, y_, 
+  xmin_, xmax_, ymin_, ymax_, xlabel_, ylabel_, xfor_, yfor_, 
+  xformin_, xformax_, xforstep_, yformin_, yformax_, yforstep_, 
+  PP_] := {KXALL1INT[ghtt, ghbb, ghZZ, ghWW, ghtautau, gCH, mCH, x, y,
+    xmin, xmax, ymin, ymax, xlabel, ylabel, xfor, yfor, xformin, 
+   xformax, xforstep, yformin, yformax, yforstep, PP], 
+  KXALL2INT[ghtt, ghbb, ghZZ, ghWW, ghtautau, gCH, mCH, x, y, xmin, 
+   xmax, ymin, ymax, xlabel, ylabel, xfor, yfor, xformin, xformax, 
+   xforstep, yformin, yformax, yforstep, PP]}
+
+(***************************************************************************************************************************************************)
+(***************************************************************************************************************************************************)
 (***************************************************************************************************************************************************)
  End[]
