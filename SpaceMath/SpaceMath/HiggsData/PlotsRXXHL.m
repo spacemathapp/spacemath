@@ -379,7 +379,7 @@ RXALLINTHL::usage ="RXALLINTHL"
 Begin["`Package`"]
 End[]
 
-Begin["`PlotsRbottomHL`Private`"]
+Begin["`PlotsRXXHL`Private`"]
 
 (*********************************************************************************************
 *******************************All signal strenghts*************************************************************
