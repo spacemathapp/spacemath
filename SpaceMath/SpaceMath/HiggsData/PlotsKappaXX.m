@@ -804,8 +804,8 @@ KXALL1sigINTHL[ghtt_, ghbb_, ghZZ_, ghWW_, ghtautau_, gCH_, mCH_, x_,
       kappaGammaINF1sigHL <= kgaga[ghtt, ghbb, ghWW, gCH, mCH] <= 
      kappaGammaSUP1sigHL},
    {x, xmin, xmax}, {y, ymin, ymax}
-   , FrameLabel -> {Style["cos\[Alpha]", Larger, Bold], 
-       Style["\!\(\*SubscriptBox[\(\[Eta]\), \(L\)]\)", Larger, Bold], 
+   , FrameLabel -> {Style[xlabel, Larger, Bold], 
+       Style[ylabel, Larger, Bold], 
        Style["SpaceMath", Medium, Bold]}, PlotLegends -> 
     Placed[{ Style["\!\(\*SubscriptBox[\(\[Kappa]\), \(b\)]\)", Larger, 
           Bold],
@@ -855,15 +855,17 @@ KXALL2sigINTHL[ghtt_, ghbb_, ghZZ_, ghWW_, ghtautau_, gCH_, mCH_, x_,
        kappaZINF1sigHL <= kZ[ghZZ] <= kappaZSUP1sigHL, 
      kappaGammaINF1sigHL <= kgaga[ghtt, ghbb, ghWW, gCH, mCH] <= 
     kappaGammaSUP1sigHL,
+    kappaGluonINF1sigHL<=Abs[kgluglu[ghtt,ghbb]]<=kappaGluonSUP1sigHL,
    kappaBotINF1sigHL <= kb[ghbb] <= kappaBotSUP1sigHL && 
         kappaTauINF1sigHL <=  ktau[ghtautau] <= kappaTauSUP1sigHL && 
        kappaWINF1sigHL <= kW[ghWW] <= kappaWSUP1sigHL && 
         kappaZINF1sigHL <= kZ[ghZZ] <= kappaZSUP1sigHL && 
       kappaGammaINF1sigHL <= kgaga[ghtt, ghbb, ghWW, gCH, mCH] <= 
-     kappaGammaSUP1sigHL},
+     kappaGammaSUP1sigHL,
+     kappaGluonINF1sigHL<=Abs[kgluglu[ghtt,ghbb]]<=kappaGluonSUP1sigHL},
    {x, xmin, xmax}, {y, ymin, ymax}
-   , FrameLabel -> {Style["cos\[Alpha]", Larger, Bold], 
-       Style["\!\(\*SubscriptBox[\(\[Eta]\), \(L\)]\)", Larger, Bold], 
+   , FrameLabel -> {Style[xlabel, Larger, Bold], 
+       Style[ylabel, Larger, Bold], 
        Style["SpaceMath", Medium, Bold]}, PlotLegends -> 
     Placed[{ Style["\!\(\*SubscriptBox[\(\[Kappa]\), \(b\)]\)", Larger, 
           Bold],
