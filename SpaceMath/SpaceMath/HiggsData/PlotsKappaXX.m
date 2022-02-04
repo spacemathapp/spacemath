@@ -804,13 +804,14 @@ KXALL1sigINTHL[ghtt_, ghbb_, ghZZ_, ghWW_, ghtautau_, gCH_, mCH_, x_,
        kappaWINF1sigHL <= kW[ghWW] <= kappaWSUP1sigHL && 
         kappaZINF1sigHL <= kZ[ghZZ] <= kappaZSUP1sigHL && 
       kappaGammaINF1sigHL <= kgaga[ghtt, ghbb, ghWW, gCH, mCH] <= 
-     kappaGammaSUP1sigHL,kappaGluonINF1sigHL<=Abs[kgluglu[ghtt,ghbb]]<=kappaGluonSUP1sigHL},
+     kappaGammaSUP1sigHL,
+     kappaGluonINF1sigHL<=Abs[kgluglu[ghtt,ghbb]]<=kappaGluonSUP1sigHL},
    {x, xmin, xmax}, {y, ymin, ymax}
    , FrameLabel -> {Style[xlabel, Larger, Bold], 
        Style[ylabel, Larger, Bold], 
        Style["SpaceMath", Medium, Bold]},
         PlotLegends -> Placed[{Style["Intersection", Larger, 
-          Bold]}, {0.1,0.1}],
+          Bold]}, {0.2,0.5}],
            PlotLegends -> 
     Placed[{ Style["\!\(\*SubscriptBox[\(\[Kappa]\), \(b\)]\)", Larger, 
           Bold],
@@ -876,7 +877,7 @@ KXALL2sigINTHL[ghtt_, ghbb_, ghZZ_, ghWW_, ghtautau_, gCH_, mCH_, x_,
        Style[ylabel, Larger, Bold], 
        Style["SpaceMath", Medium, Bold]},
        PlotLegends -> Placed[{Style["Intersection", Larger, 
-          Bold]}, {0.1,0.5}], PlotLegends -> 
+          Bold]}, {0.2,0.5}], PlotLegends -> 
     Placed[{ Style["\!\(\*SubscriptBox[\(\[Kappa]\), \(b\)]\)", Larger, 
           Bold],
          Style["\!\(\*SubscriptBox[\(\[Kappa]\), \(\[Tau]\)]\)", 
