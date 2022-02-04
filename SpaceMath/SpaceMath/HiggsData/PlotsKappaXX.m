@@ -849,20 +849,20 @@ KXALL1INTHL[ghtt_, ghbb_, ghZZ_, ghWW_, ghtautau_, gCH_, mCH_, x_, y_,
 KXALL2sigINTHL[ghtt_, ghbb_, ghZZ_, ghWW_, ghtautau_, gCH_, mCH_, x_, 
   y_, xmin_, xmax_, ymin_, ymax_, xlabel_, ylabel_, PP_] := RegionPlot[
   {
-     kappaBotINF1sigHL <= kb[ghbb] <= kappaBotSUP1sigHL, 
-       kappaTauINF1sigHL <= ktau[ghtautau] <= kappaTauSUP1sigHL, 
-      kappaWINF1sigHL <= kW[ghWW] <= kappaWSUP1sigHL, 
-       kappaZINF1sigHL <= kZ[ghZZ] <= kappaZSUP1sigHL, 
-     kappaGammaINF1sigHL <= kgaga[ghtt, ghbb, ghWW, gCH, mCH] <= 
-    kappaGammaSUP1sigHL,
-    kappaGluonINF1sigHL<=Abs[kgluglu[ghtt,ghbb]]<=kappaGluonSUP1sigHL,
-   kappaBotINF1sigHL <= kb[ghbb] <= kappaBotSUP1sigHL && 
-        kappaTauINF1sigHL <=  ktau[ghtautau] <= kappaTauSUP1sigHL && 
-       kappaWINF1sigHL <= kW[ghWW] <= kappaWSUP1sigHL && 
-        kappaZINF1sigHL <= kZ[ghZZ] <= kappaZSUP1sigHL && 
-      kappaGammaINF1sigHL <= kgaga[ghtt, ghbb, ghWW, gCH, mCH] <= 
-     kappaGammaSUP1sigHL,
-     kappaGluonINF1sigHL<=Abs[kgluglu[ghtt,ghbb]]<=kappaGluonSUP1sigHL},
+     kappaBotINF2sigHL <= kb[ghbb] <= kappaBotSUP2sigHL, 
+       kappaTauINF2sigHL <= ktau[ghtautau] <= kappaTauSUP2sigHL, 
+      kappaWINF2sigHL <= kW[ghWW] <= kappaWSUP2sigHL, 
+       kappaZINF2sigHL <= kZ[ghZZ] <= kappaZSUP2sigHL, 
+     kappaGammaINF2sigHL <= kgaga[ghtt, ghbb, ghWW, gCH, mCH] <= 
+    kappaGammaSUP2sigHL,
+    kappaGluonINF2sigHL<=Abs[kgluglu[ghtt,ghbb]]<=kappaGluonSUP2sigHL,
+   kappaBotINF2sigHL <= kb[ghbb] <= kappaBotSUP2sigHL && 
+        kappaTauINF2sigHL <=  ktau[ghtautau] <= kappaTauSUP2sigHL && 
+       kappaWINF2sigHL <= kW[ghWW] <= kappaWSUP2sigHL && 
+        kappaZINF2sigHL <= kZ[ghZZ] <= kappaZSUP2sigHL && 
+      kappaGammaINF2sigHL <= kgaga[ghtt, ghbb, ghWW, gCH, mCH] <= 
+     kappaGammaSUP2sigHL,
+     kappaGluonINF2sigHL<=Abs[kgluglu[ghtt,ghbb]]<=kappaGluonSUP2sigHL},
    {x, xmin, xmax}, {y, ymin, ymax}
    , FrameLabel -> {Style[xlabel, Larger, Bold], 
        Style[ylabel, Larger, Bold], 
@@ -874,6 +874,7 @@ KXALL2sigINTHL[ghtt_, ghbb_, ghZZ_, ghWW_, ghtautau_, gCH_, mCH_, x_,
         Style["\!\(\*SubscriptBox[\(\[Kappa]\), \(W\)]\)", Larger, Bold], 
         Style["\!\(\*SubscriptBox[\(\[Kappa]\), \(Z\)]\)", Larger, Bold], 
      Style["\!\(\*SubscriptBox[\(\[Kappa]\), \(\[Gamma]\)]\)", Larger, 
+      Bold],Style["\!\(\*SubscriptBox[\(\[Kappa]\), \(g\)]\)", Larger, 
       Bold]}, {1, 
         0.6}], 
    AxesLabel -> {Style["x", Larger, Bold], 
