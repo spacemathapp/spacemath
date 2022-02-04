@@ -809,8 +809,8 @@ KXALL1sigINTHL[ghtt_, ghbb_, ghZZ_, ghWW_, ghtautau_, gCH_, mCH_, x_,
    , FrameLabel -> {Style[xlabel, Larger, Bold], 
        Style[ylabel, Larger, Bold], 
        Style["SpaceMath", Medium, Bold]},
-        PlotLegends -> Placed[{Style["Intersection", Larger, 
-          Bold]}, {0.8,0.6}],
+        (*PlotLegends -> Placed[{Style["Intersection", Larger, 
+          Bold]}, {0.8,0.6}],*)
            PlotLegends -> 
     Placed[{ Style["\!\(\*SubscriptBox[\(\[Kappa]\), \(b\)]\)", Larger, 
           Bold],
@@ -875,8 +875,8 @@ KXALL2sigINTHL[ghtt_, ghbb_, ghZZ_, ghWW_, ghtautau_, gCH_, mCH_, x_,
    , FrameLabel -> {Style[xlabel, Larger, Bold], 
        Style[ylabel, Larger, Bold], 
        Style["SpaceMath", Medium, Bold]},
-       PlotLegends -> Placed[{Style["Intersection", Larger, 
-          Bold]}, {0.8,0.6}], PlotLegends -> 
+       (*PlotLegends -> Placed[{Style["Intersection", Larger, 
+          Bold]}, {0.8,0.6}],*) PlotLegends -> 
     Placed[{ Style["\!\(\*SubscriptBox[\(\[Kappa]\), \(b\)]\)", Larger, 
           Bold],
          Style["\!\(\*SubscriptBox[\(\[Kappa]\), \(\[Tau]\)]\)", 
