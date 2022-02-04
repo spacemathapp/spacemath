@@ -803,8 +803,7 @@ KXALL1sigINTHL[ghtt_, ghbb_, ghZZ_, ghWW_, ghtautau_, gCH_, mCH_, x_,
         kappaTauINF1sigHL <=  ktau[ghtautau] <= kappaTauSUP1sigHL && 
        kappaWINF1sigHL <= kW[ghWW] <= kappaWSUP1sigHL && 
         kappaZINF1sigHL <= kZ[ghZZ] <= kappaZSUP1sigHL && 
-      kappaGammaINF1sigHL <= kgaga[ghtt, ghbb, ghWW, gCH, mCH] <= 
-     kappaGammaSUP1sigHL,
+      kappaGammaINF1sigHL <= kgaga[ghtt, ghbb, ghWW, gCH, mCH] <= kappaGammaSUP1sigHL &&
      kappaGluonINF1sigHL<=Abs[kgluglu[ghtt,ghbb]]<=kappaGluonSUP1sigHL},
    {x, xmin, xmax}, {y, ymin, ymax}
    , FrameLabel -> {Style[xlabel, Larger, Bold], 
@@ -868,8 +867,7 @@ KXALL2sigINTHL[ghtt_, ghbb_, ghZZ_, ghWW_, ghtautau_, gCH_, mCH_, x_,
         kappaTauINF2sigHL <=  ktau[ghtautau] <= kappaTauSUP2sigHL && 
        kappaWINF2sigHL <= kW[ghWW] <= kappaWSUP2sigHL && 
         kappaZINF2sigHL <= kZ[ghZZ] <= kappaZSUP2sigHL && 
-      kappaGammaINF2sigHL <= kgaga[ghtt, ghbb, ghWW, gCH, mCH] <= 
-     kappaGammaSUP2sigHL,
+      kappaGammaINF2sigHL <= kgaga[ghtt, ghbb, ghWW, gCH, mCH] <= kappaGammaSUP2sigHL &&
      kappaGluonINF2sigHL<=Abs[kgluglu[ghtt,ghbb]]<=kappaGluonSUP2sigHL},
    {x, xmin, xmax}, {y, ymin, ymax}
    , FrameLabel -> {Style[xlabel, Larger, Bold], 
