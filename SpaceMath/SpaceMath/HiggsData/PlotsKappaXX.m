@@ -663,12 +663,14 @@ KXALL1sigINT[ghtt_, ghbb_, ghZZ_, ghWW_, ghtautau_, gCH_, mCH_, x_,
        kappaZINF1sig <= kZ[ghZZ] <= kappaZSUP1sig, 
      kappaGammaINF1sig <= kgaga[ghtt, ghbb, ghWW, gCH, mCH] <= 
     kappaGammaSUP1sig,
+    kappaGluonINF1sigHL<=Abs[kgluglu[ghtt,ghbb]]<=kappaGluonSUP1sigHL,
    kappaBotINF1sig <= kb[ghbb] <= kappaBotSUP1sig && 
         kappaTauINF1sig <=  ktau[ghtautau] <= kappaTauSUP1sig && 
        kappaWINF1sig <= kW[ghWW] <= kappaWSUP1sig && 
         kappaZINF1sig <= kZ[ghZZ] <= kappaZSUP1sig && 
       kappaGammaINF1sig <= kgaga[ghtt, ghbb, ghWW, gCH, mCH] <= 
-     kappaGammaSUP1sig},
+     kappaGammaSUP1sig &&
+     kappaGluonINF1sigHL<=Abs[kgluglu[ghtt,ghbb]]<=kappaGluonSUP1sigHL},
    {x, xmin, xmax}, {y, ymin, ymax}
    , FrameLabel -> {Style["cos\[Alpha]", Larger, Bold], 
        Style["\!\(\*SubscriptBox[\(\[Eta]\), \(L\)]\)", Larger, Bold], 
@@ -680,7 +682,9 @@ KXALL1sigINT[ghtt_, ghbb_, ghZZ_, ghWW_, ghtautau_, gCH_, mCH_, x_,
         Style["\!\(\*SubscriptBox[\(\[Kappa]\), \(W\)]\)", Larger, Bold], 
         Style["\!\(\*SubscriptBox[\(\[Kappa]\), \(Z\)]\)", Larger, Bold], 
      Style["\!\(\*SubscriptBox[\(\[Kappa]\), \(\[Gamma]\)]\)", Larger, 
-      Bold]}, {1, 
+      Bold],Style["\!\(\*SubscriptBox[\(\[Kappa]\), \(g\)]\)", Larger, 
+      Bold],Style["Intersection", Larger, 
+          Bold]}, {1, 
         0.6}], 
    AxesLabel -> {Style["x", Larger, Bold], 
        Style["y", Larger, Bold]}, AspectRatio -> 1, 
@@ -694,12 +698,14 @@ KXALL1sigINT[ghtt_, ghbb_, ghZZ_, ghWW_, ghtautau_, gCH_, mCH_, x_,
       3 -> Directive[Yellow, Dashed, Thickness[0.003]], 
       4 -> Directive[Blue, Dashed, Thickness[0.003]], 
       5 -> Directive[Orange, Dashed, Thickness[0.003]],
-       6 -> Directive[Red, Dashed, Thickness[0.003]]},
+      6 -> Directive[Cyan, Dashed, Thickness[0.003]],
+       7 -> Directive[Red, Dashed, Thickness[0.003]]},
       PlotStyle -> {{Green, Opacity[0.3]},
         {Pink, Opacity[0.3]}, 
         {Yellow, Opacity[0.3]}, 
         {Blue, Opacity[0.3]},
          {Orange, Opacity[0.3]},
+         {Cyan, Opacity[0.3]},
          {Red, Opacity[1]}}
      , PlotPoints -> PP
   ]
@@ -715,18 +721,20 @@ KXALL1INT[ghtt_, ghbb_, ghZZ_, ghWW_, ghtautau_, gCH_, mCH_, x_, y_,
 KXALL2sigINT[ghtt_, ghbb_, ghZZ_, ghWW_, ghtautau_, gCH_, mCH_, x_, 
   y_, xmin_, xmax_, ymin_, ymax_, xlabel_, ylabel_, PP_] := RegionPlot[
   {
-     kappaBotINF1sig <= kb[ghbb] <= kappaBotSUP1sig, 
-       kappaTauINF1sig <= ktau[ghtautau] <= kappaTauSUP1sig, 
-      kappaWINF1sig <= kW[ghWW] <= kappaWSUP1sig, 
-       kappaZINF1sig <= kZ[ghZZ] <= kappaZSUP1sig, 
-     kappaGammaINF1sig <= kgaga[ghtt, ghbb, ghWW, gCH, mCH] <= 
-    kappaGammaSUP1sig,
-   kappaBotINF1sig <= kb[ghbb] <= kappaBotSUP1sig && 
-        kappaTauINF1sig <=  ktau[ghtautau] <= kappaTauSUP1sig && 
-       kappaWINF1sig <= kW[ghWW] <= kappaWSUP1sig && 
-        kappaZINF1sig <= kZ[ghZZ] <= kappaZSUP1sig && 
-      kappaGammaINF1sig <= kgaga[ghtt, ghbb, ghWW, gCH, mCH] <= 
-     kappaGammaSUP1sig},
+     kappaBotINF2sig <= kb[ghbb] <= kappaBotSUP2sig, 
+       kappaTauINF2sig <= ktau[ghtautau] <= kappaTauSUP2sig, 
+      kappaWINF2sig <= kW[ghWW] <= kappaWSUP2sig, 
+       kappaZINF2sig <= kZ[ghZZ] <= kappaZSUP2sig, 
+     kappaGammaINF2sig <= kgaga[ghtt, ghbb, ghWW, gCH, mCH] <= 
+    kappaGammaSUP2sig,
+    kappaGluonINF2sigHL<=Abs[kgluglu[ghtt,ghbb]]<=kappaGluonSUP2sigHL,
+   kappaBotINF2sig <= kb[ghbb] <= kappaBotSUP2sig && 
+        kappaTauINF2sig <=  ktau[ghtautau] <= kappaTauSUP2sig && 
+       kappaWINF2sig <= kW[ghWW] <= kappaWSUP2sig && 
+        kappaZINF2sig <= kZ[ghZZ] <= kappaZSUP2sig && 
+      kappaGammaINF2sig <= kgaga[ghtt, ghbb, ghWW, gCH, mCH] <= 
+     kappaGammaSUP2sig &&
+     kappaGluonINF2sigHL<=Abs[kgluglu[ghtt,ghbb]]<=kappaGluonSUP2sigHL},
    {x, xmin, xmax}, {y, ymin, ymax}
    , FrameLabel -> {Style["cos\[Alpha]", Larger, Bold], 
        Style["\!\(\*SubscriptBox[\(\[Eta]\), \(L\)]\)", Larger, Bold], 
@@ -739,7 +747,8 @@ KXALL2sigINT[ghtt_, ghbb_, ghZZ_, ghWW_, ghtautau_, gCH_, mCH_, x_,
         Style["\!\(\*SubscriptBox[\(\[Kappa]\), \(Z\)]\)", Larger, Bold], 
      Style["\!\(\*SubscriptBox[\(\[Kappa]\), \(\[Gamma]\)]\)", Larger, 
       Bold],Style["\!\(\*SubscriptBox[\(\[Kappa]\), \(g\)]\)", Larger, 
-      Bold]}, {1, 
+      Bold],Style["Intersection", Larger, 
+          Bold]}, {1, 
         0.6}], 
    AxesLabel -> {Style["x", Larger, Bold], 
        Style["y", Larger, Bold]}, AspectRatio -> 1, 
@@ -753,12 +762,14 @@ KXALL2sigINT[ghtt_, ghbb_, ghZZ_, ghWW_, ghtautau_, gCH_, mCH_, x_,
       3 -> Directive[Yellow, Dashed, Thickness[0.003]], 
       4 -> Directive[Blue, Dashed, Thickness[0.003]], 
       5 -> Directive[Orange, Dashed, Thickness[0.003]],
-       6 -> Directive[Red, Dashed, Thickness[0.003]]},
+       6 -> Directive[Cyan, Dashed, Thickness[0.003]],
+       7 -> Directive[Red, Dashed, Thickness[0.003]]},
       PlotStyle -> {{Green, Opacity[0.3]},
         {Pink, Opacity[0.3]}, 
         {Yellow, Opacity[0.3]}, 
         {Blue, Opacity[0.3]},
          {Orange, Opacity[0.3]},
+         {Cyan, Opacity[0.3]},
          {Red, Opacity[1]}}
      , PlotPoints -> PP
   ]
