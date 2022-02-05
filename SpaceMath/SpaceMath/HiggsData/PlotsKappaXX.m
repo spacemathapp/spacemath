@@ -811,9 +811,8 @@ KXALL1sigINTHL[ghtt_, ghbb_, ghZZ_, ghWW_, ghtautau_, gCH_, mCH_, x_,
        Style["SpaceMath", Medium, Bold]},
         (*PlotLegends -> Placed[{Style["Intersection", Larger, 
           Bold]}, {0.6,0.1}],*)
-          Placed[{Style["Intersection", Larger, 
+          PlotLegends -> Placed[{Style["Intersection", Larger, 
           Bold]}, {0.6,0.1}],
-           PlotLegends -> 
     Placed[{ Style["\!\(\*SubscriptBox[\(\[Kappa]\), \(b\)]\)", Larger, 
           Bold],
          Style["\!\(\*SubscriptBox[\(\[Kappa]\), \(\[Tau]\)]\)", 
