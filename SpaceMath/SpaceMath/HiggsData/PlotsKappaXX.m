@@ -599,8 +599,7 @@ kappaGluonINF1sigHL<=kgluglu[ghtt,ghbb]<=kappaGluonSUP1sigHL},
  {x, xmin, xmax}, {y, ymin, ymax}
  ,PlotPoints->PP, FrameLabel -> {Style[xlabel, Larger, Bold], 
    Style[ylabel, Larger, Bold], 
-   Style["\!\(\*
-StyleBox[\"SpaceMath\",\nFontWeight->\"Bold\",\nFontSlant->\"Italic\"]\)", Larger, Bold]}, 
+   Style["SpaceMath", Medium, Bold]}, 
  PlotLegends -> Placed[{"Intersection"}, {0.8,0.6}],
  (*AxesLabel -> {Style["x", Larger, Bold], 
    Style["y", Larger, Bold]},*) 
@@ -625,8 +624,7 @@ kappaGluonINF2sigHL<=kgluglu[ghtt,ghbb]<=kappaGluonSUP2sigHL},
  {x, xmin, xmax}, {y, ymin, ymax}
 ,PlotPoints->PP , FrameLabel -> {Style[xlabel, Larger, Bold], 
    Style[ylabel, Larger, Bold], 
-   Style["\!\(\*
-StyleBox[\"SpaceMath\",\nFontWeight->\"Bold\",\nFontSlant->\"Italic\"]\)", Larger, Bold]}, 
+   Style["SpaceMath", Medium, Bold]}, 
  PlotLegends -> Placed[{"Intersection"}, {0.8,0.6}],
  (*AxesLabel -> {Style["x", Larger, Bold], 
    Style["y", Larger, Bold]},*)
