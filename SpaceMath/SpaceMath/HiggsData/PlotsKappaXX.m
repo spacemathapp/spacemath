@@ -319,8 +319,7 @@ kappaGluonINF2sig<=Abs[kgluglu[ghtt,ghbb]]<=kappaGluonSUP2sig},
  {x, xmin, xmax}, {y, ymin, ymax}
  , FrameLabel -> {Style[xlabel, Larger, Bold], 
    Style[ylabel, Larger, Bold], 
-   Style["\!\(\*
-StyleBox[\"SpaceMath\",\nFontWeight->\"Bold\",\nFontSlant->\"Italic\"]\)", Medium, Bold]}, 
+  Style["SpaceMath", Medium, Bold]}, 
  PlotLegends -> Placed[{"\!\(\*SubscriptBox[\(\[Kappa]\), \(b\)]\)",(*
 "\!\(\*SubscriptBox[\(\[Kappa]\), \(t\)]\)",*)"\!\(\*SubscriptBox[\(\[Kappa]\), \(\[Tau]\)]\)",
 "\!\(\*SubscriptBox[\(\[Kappa]\), \(W\)]\)","\!\(\*SubscriptBox[\(\[Kappa]\), \(Z\)]\)",
@@ -357,8 +356,7 @@ kappaGluonINF1sig<=Abs[kgluglu[ghtt,ghbb]]<=kappaGluonSUP1sig},
  {x, xmin, xmax}, {y, ymin, ymax}
  , FrameLabel -> {Style[xlabel, Larger, Bold], 
    Style[ylabel, Larger, Bold], 
-   Style["\!\(\*
-StyleBox[\"SpaceMath\",\nFontWeight->\"Bold\",\nFontSlant->\"Italic\"]\)", Medium, Bold]}, 
+   Style["SpaceMath", Medium, Bold]}, 
  PlotLegends -> Placed[{"\!\(\*SubscriptBox[\(\[Kappa]\), \(b\)]\)",(*
 "\!\(\*SubscriptBox[\(\[Kappa]\), \(t\)]\)",*)"\!\(\*SubscriptBox[\(\[Kappa]\), \(\[Tau]\)]\)",
 "\!\(\*SubscriptBox[\(\[Kappa]\), \(W\)]\)","\!\(\*SubscriptBox[\(\[Kappa]\), \(Z\)]\)",
@@ -429,8 +427,7 @@ kappaGluonINF1sig<=kgluglu[ghtt,ghbb]<=kappaGluonSUP1sig},
  {x, xmin, xmax}, {y, ymin, ymax}
  ,PlotPoints->PP, FrameLabel -> {Style[xlabel, Larger, Bold], 
    Style[ylabel, Larger, Bold], 
-   Style["\!\(\*
-StyleBox[\"SpaceMath\",\nFontWeight->\"Bold\",\nFontSlant->\"Italic\"]\)", Larger, Bold]}, 
+   Style["SpaceMath", Medium, Bold]}, 
  PlotLegends -> Placed[{"Intersection"}, {0.8,0.6}],
  (*AxesLabel -> {Style["x", Larger, Bold], 
    Style["y", Larger, Bold]},*) 
@@ -454,8 +451,7 @@ kappaGluonINF2sig<=kgluglu[ghtt,ghbb]<=kappaGluonSUP2sig},
  {x, xmin, xmax}, {y, ymin, ymax}
 ,PlotPoints->PP , FrameLabel -> {Style[xlabel, Larger, Bold], 
    Style[ylabel, Larger, Bold], 
-   Style["\!\(\*
-StyleBox[\"SpaceMath\",\nFontWeight->\"Bold\",\nFontSlant->\"Italic\"]\)", Larger, Bold]}, 
+   Style["SpaceMath", Medium, Bold]}, 
  PlotLegends -> Placed[{"Intersection"}, {0.8,0.6}],
  (*AxesLabel -> {Style["x", Larger, Bold], 
    Style["y", Larger, Bold]},*)
@@ -494,8 +490,7 @@ kappaGluonINF2sigHL<=Abs[kgluglu[ghtt,ghbb]]<=kappaGluonSUP2sigHL},
  {x, xmin, xmax}, {y, ymin, ymax}
  , FrameLabel -> {Style[xlabel, Larger, Bold], 
    Style[ylabel, Larger, Bold], 
-   Style["\!\(\*
-StyleBox[\"SpaceMath\",\nFontWeight->\"Bold\",\nFontSlant->\"Italic\"]\)", Medium, Bold]}, 
+   Style["SpaceMath", Medium, Bold]}, 
  PlotLegends -> Placed[{"\!\(\*SubscriptBox[\(\[Kappa]\), \(b\)]\)",(*
 "\!\(\*SubscriptBox[\(\[Kappa]\), \(t\)]\)",*)"\!\(\*SubscriptBox[\(\[Kappa]\), \(\[Tau]\)]\)",
 "\!\(\*SubscriptBox[\(\[Kappa]\), \(W\)]\)","\!\(\*SubscriptBox[\(\[Kappa]\), \(Z\)]\)",
@@ -534,8 +529,7 @@ kappaGluonINF1sigHL<=Abs[kgluglu[ghtt,ghbb]]<=kappaGluonSUP1sigHL},
  {x, xmin, xmax}, {y, ymin, ymax}
  , FrameLabel -> {Style[xlabel, Larger, Bold], 
    Style[ylabel, Larger, Bold], 
-   Style["\!\(\*
-StyleBox[\"SpaceMath\",\nFontWeight->\"Bold\",\nFontSlant->\"Italic\"]\)", Medium, Bold]}, 
+   Style["SpaceMath", Medium, Bold]}, 
  PlotLegends -> Placed[{"\!\(\*SubscriptBox[\(\[Kappa]\), \(b\)]\)",(*
 "\!\(\*SubscriptBox[\(\[Kappa]\), \(t\)]\)",*)"\!\(\*SubscriptBox[\(\[Kappa]\), \(\[Tau]\)]\)",
 "\!\(\*SubscriptBox[\(\[Kappa]\), \(W\)]\)","\!\(\*SubscriptBox[\(\[Kappa]\), \(Z\)]\)",
@@ -628,7 +622,7 @@ kappaGluonINF2sigHL<=kgluglu[ghtt,ghbb]<=kappaGluonSUP2sigHL},
  PlotLegends -> Placed[{"Intersection"}, {0.8,0.6}],
  (*AxesLabel -> {Style["x", Larger, Bold], 
    Style["y", Larger, Bold]},*)
- FrameStyle ->  Thickness[0.004], LabelStyle -> 35, ImageSize -> 600,
+ FrameStyle ->  Thickness[0.004], LabelStyle -> 35, ImageSize -> 1000,
   GridLines -> Automatic, GridLinesStyle -> 
    Directive[Black, 
      Dashed], BoundaryStyle -> {1 -> Directive[Purple, Dashed, Thickness[0.003]]}, PlotStyle -> {{Purple, Opacity[0.3]}}, AspectRatio->1]
