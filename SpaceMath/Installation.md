@@ -1,6 +1,6 @@
 Automatic Installation
 
-Run the following instructions in a Notebook of Mathematica
+- Run the following instructions in a Notebook of Mathematica
 
 Import["https://raw.githubusercontent.com/spacemathapp/spacemath/stable/SpaceMath/Install.m"]
 
