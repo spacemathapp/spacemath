@@ -1,6 +1,5 @@
 (* Wolfram Language Package *)
 
-
 (*value of masses(units given in GeV )*)
 (*Reference: M. Tanabashi et al. (Particle Data Group), Phys. Rev. D 98, 030001 (2018).*)
 
@@ -80,7 +79,32 @@ RzzSUP1sig::usage="RzzSUP1sig"
 RzzINF1sig::usage="RzzINF1sig"
 RgammagammaINF1sig::usage="RgammagammaINF1sig"
 RgammagammaSUP1sig::usage="RgammagammaSUP1sig"
+(***********************************************************************************************)
+(*Projection for Signal Strengths at HL-LHC to 1 sigma, taken from arXiv:1902.00134v2[hep-ph]*)
+(*Signal Strengths to 1\[Sigma]*)
+RbbSUP1sigHL::usage="RbbSUP1sigHL"
+RbbINF1sigHL::usage="RbbINF1sigHL"
+RtautauSUP1sigHL::usage="RtautauSUP1sigHL"
+RtautauINF1sigHL::usage="RtautauINF1sigHL"
+RwwSUP1sigHL::usage="RwwSUP1sigHL"
+RwwINF1sigHL::usage="RwwINF1sigHL"
+RzzSUP1sigHL::usage="RzzSUP1sigHL"
+RzzINF1sigHL::usage="RzzINF1sigHL"
+RgammagammaINF1sigHL::usage="RgammagammaINF1sigHL"
+RgammagammaSUP1sigHL::usage="RgammagammaSUP1sigHL"
 
+(*Signal Strengths to 1\[Sigma]*) (*ONLY TEST*)
+RbbSUP2sigHL::usage="RbbSUP2sigHL"
+RbbINF2sigHL::usage="RbbINF2sigHL"
+RtautauSUP2sigHL::usage="RtautauSUP2sigHL"
+RtautauINF2sigHL::usage="RtautauINF2sigHL"
+RwwSUP2sigHL::usage="RwwSUP2sigHL"
+RwwINF2sigHL::usage="RwwINF2sigHL"
+RzzSUP2sigHL::usage="RzzSUP2sigHL"
+RzzINF2sigHL::usage="RzzINF2sigHL"
+RgammagammaINF2sigHL::usage="RgammagammaINF2sigHL"
+RgammagammaSUP2sigHL::usage="RgammagammaSUP2sigHL"  
+(***********************************************************************************************)
 (*kappa-parametrization*)
 (*central values*)
 kappaZ::usage="kappaZ"
@@ -168,7 +192,6 @@ kappaGluonINF1sigHL::usage="kappaGluonINF1sigHL"
 kappaGammaSUP1sigHL::usage="kappaGammaSUP1sigHL"
 kappaGammaINF1sigHL::usage="kappaGammaINF1sigHL"
 
-
 (*kappaX to 2\[Sigma]*)
 (*Projection for kappa top at HL-LHC to 2 sigma, taken from arXiv:1902.00134v2[hep-ph]*)
 kappaZSUP2sigHL::usage="kappaZSUP2sigHL"
@@ -185,7 +208,6 @@ kappaGluonSUP2sigHL::usage="kappaGluonSUP2sigHL"
 kappaGluonINF2sigHL::usage="kappaGluonINF2sigHL"
 kappaGammaSUP2sigHL::usage="kappaGammaSUP2sigHL"
 kappaGammaINF2sigHL::usage="kappaGammaINF2sigHL"
-
 
 (********************************************************************************************************)
 (********************************************************************************************************)
@@ -206,7 +228,6 @@ kappaGluonSUP1sigHE::usage="kappaGluonSUP1sigHE"
 kappaGluonINF1sigHE::usage="kappaGluonINF1sigHE"
 kappaGammaSUP1sigHE::usage="kappaGammaSUP1sigHE"
 kappaGammaINF1sigHE::usage="kappaGammaINF1sigHE"
-
 
 (*kappaX to 2\[Sigma]*)
 (*Projection for kappa at HE-LHC to 2 sigma, taken from arXiv:1902.00134v2[hep-ph]*)
@@ -293,8 +314,8 @@ RwwSUP2sig=1.4202;
 RwwINF2sig=0.739804;
 RzzSUP2sig=1.42007;
 RzzINF2sig=0.959928;
-RgammagammaINF2sig=0.909912;
 RgammagammaSUP2sig=1.29009;
+RgammagammaINF2sig=0.909912;
 
 (*Signal Strengths to 1\[Sigma]*)
 (*Reference: ARXIV:1809.10733*)
@@ -306,8 +327,35 @@ RwwSUP1sig=1.2501;
 RwwINF1sig=0.909902;
 RzzSUP1sig=1.30504;
 RzzINF1sig=1.07496;
-RgammagammaINF1sig=1.00496;
 RgammagammaSUP1sig=1.19504;
+RgammagammaINF1sig=1.00496;
+
+(***********************************************************************************************)
+(*Projection for Signal Strengths at HL-LHC to 1 sigma, taken from arXiv:1902.00134v2[hep-ph]*)
+(*Signal Strengths to 1\[Sigma]*)
+RbbSUP1sigHL=0.992;
+RbbINF1sigHL=0.908;
+RtautauSUP1sigHL=1.043;
+RtautauINF1sigHL=0.997;
+RwwSUP1sigHL=1.027;
+RwwINF1sigHL=0.993;
+RzzSUP1sigHL=1.027;
+RzzINF1sigHL=0.993;
+RgammagammaSUP1sigHL=1.19504;(*0.116;*)
+RgammagammaINF1sigHL=1.00496(*-0.016;*)
+
+(*Signal Strengths to 2\[Sigma]*) (*Only for test*)
+RbbSUP2sigHL=0.992;
+RbbINF2sigHL=0.908;
+RtautauSUP2sigHL=1.043;
+RtautauINF2sigHL=0.997;
+RwwSUP2sigHL=1.027;
+RwwINF2sigHL=0.993;
+RzzSUP2sigHL=1.027;
+RzzINF2sigHL=0.993;
+RgammagammaSUP2sigHL=0.116;
+RgammagammaINF2sigHL=-0.016;
+(***********************************************************************************************)
 
 (*kappa-parametrization*)
 (*central values*)
@@ -396,7 +444,6 @@ kappaGluonINF1sigHL=0.993;
 kappaGammaSUP1sigHL=0.993;
 kappaGammaINF1sigHL=0.947;
 
-
 (*kappaX to 2\[Sigma]*)
 (*Projection for kappa top at HL-LHC to 2 sigma, taken from arXiv:1902.00134v2[hep-ph]*)
 kappaZSUP2sigHL=1.044;
@@ -413,7 +460,6 @@ kappaGluonSUP2sigHL=1.074;
 kappaGluonINF2sigHL=0.966;
 kappaGammaSUP2sigHL=1.016;
 kappaGammaINF2sigHL=0.924;
-
 
 (********************************************************************************************************)
 (********************************************************************************************************)
@@ -435,7 +481,6 @@ kappaGluonINF1sigHE=1.005;
 kappaGammaSUP1sigHE=0.982;
 kappaGammaINF1sigHE=0.958;
 
-
 (*kappaX to 2\[Sigma]*)
 (*Projection for kappa at HE-LHC to 2 sigma, taken from arXiv:1902.00134v2[hep-ph]*)
 kappaZSUP2sigHE=1.028;
@@ -452,7 +497,6 @@ kappaGluonSUP2sigHE=1.05;
 kappaGluonINF2sigHE=0.99;
 kappaGammaSUP2sigHE=0.994;
 kappaGammaINF2sigHE=0.946;
-
 
 (********************************************************************************************************)
 (********************************************************************************************************)
@@ -472,14 +516,13 @@ BRHtoETAU=0.0061; (*Upper bound of the h\[Rule] e tau decay *)
 Ttau=(2.906*10^-13) ((1/6.582)*10^25); (*tau lifetime*)
 Tmuon=(2.197*10^-6) ((1/6.582)*10^25); 
 TotWidh=0.0047; (*Total width of the Higgs boson*)
-aMUInf=1.32*10^-9; (*lower limit of the discrepancy interval of the muon anomalous magnetic dipole moment*)
-aMUSup=4.44*10^-9; (*upper limit of the discrepancy interval of the muon anomalous magnetic dipole moment*)
+aMUInf= 1.92*10^-9;(* 1.32*10^-9;lower limit of the discrepancy interval of the muon anomalous magnetic dipole moment*)
+aMUSup= 3.1*10^-9;(* 4.44*10^-9;upper limit of the discrepancy interval of the muon anomalous magnetic dipole moment*)
 aSM=11659179*10^-10; (*Theoretical prediction of the SM for the muon anomalous magnetic dipole moment*)
 aEXP=116592091*10^-11; (*Experimental value for the muon anomalous magnetic dipole moment*)
 BRTAUtolnunu=0.17; (*Branching ratio of the tau \[Rule] l nu nu decay*)
 dmuINF=-10*(10^-20); (*lower limit of the muon alectric dipole moment*)
 dmuSUP=8*(10^-20);
-
 
 (* B-physics *)
 (*
@@ -497,7 +540,6 @@ BRexpBdTOmumu=9.4*(10^(-10))
 (* b-s gamma *)
 bsgammaINF3sigma = 0.000259;
 bsgammaSUP3sigma = \!\(TraditionalForm\`0.000427\);
-
 
 
 End[]
