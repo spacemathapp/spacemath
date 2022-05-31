@@ -96,6 +96,7 @@ listValues = FileNames[{"*.m"},ToFileName[{$SpaceMathDirectory,"Values"}]];
 listMisc = FileNames[{"*.m"},ToFileName[{$SpaceMathDirectory,"Miscellaneous"}]];
 listLimits = FileNames[{"*.m"},ToFileName[{$SpaceMathDirectory,"Limits"}]];
 listChiSquare = FileNames[{"*.m"},ToFileName[{$SpaceMathDirectory,"ChiSquare"}]];
+listWorkArea = FileNames[{"*.m"},ToFileName[{$SpaceMathDirectory,"WorkArea"}]];
 
 AppendTo[$ContextPath, "SpaceMath`Package`"];
 
@@ -105,7 +106,9 @@ SMDeclareHeader/@listObliquePar;
 SMDeclareHeader/@listValues;
 SMDeclareHeader/@listMisc;
 SMDeclareHeader/@listLimits;
-SMDeclareHeader/@listChiSquare
+SMDeclareHeader/@listChiSquare;
+SMDeclareHeader/@listWorkArea;
+
 
 Get/@listHiggsData;
 Get/@listLFVprocesses;
@@ -113,7 +116,8 @@ Get/@listObliquePar;
 Get/@listValues;
 Get/@listMisc;
 Get/@listLimits;
-Get/@listChiSquare
+Get/@listChiSquare;
+Get/@listWorkArea;
 
 EndPackage[];
 
