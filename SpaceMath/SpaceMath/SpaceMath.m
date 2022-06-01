@@ -42,7 +42,7 @@ If[ Global`$SpaceMathStartupMessages=!=False,
 
 BeginPackage["SpaceMath`"]
 
-Get[FileNameJoin[{$SpaceMathDirectory,"WorkArea/SignalStrengthModifiersRxFourParametersRegionPlotMOD.wl"}]];
+Get[FileNameJoin[{$SpaceMathDirectory,"WorkArea/SignalStrengthModifiersRxFourParametersRegionPlotMOD.m"}]];
 
 HiggsData::usage = "The implementation of the Higgs boson data within the SpaceMath code, \
 was closely following the reference : arXiv:1809.10733v2[hep-ex], 10.1140/epjc/s10052-019-6909-y."
