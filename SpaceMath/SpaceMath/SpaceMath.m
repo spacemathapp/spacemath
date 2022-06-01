@@ -42,6 +42,8 @@ If[ Global`$SpaceMathStartupMessages=!=False,
 
 BeginPackage["SpaceMath`"]
 
+Get[FileNameJoin[{$SpaceMathDirectory,"WorkArea/SignalStrengthModifiersRxFourParametersRegionPlotMOD.wl"}]];
+
 HiggsData::usage = "The implementation of the Higgs boson data within the SpaceMath code, \
 was closely following the reference : arXiv:1809.10733v2[hep-ex], 10.1140/epjc/s10052-019-6909-y."
 
@@ -96,7 +98,7 @@ listValues = FileNames[{"*.m"},ToFileName[{$SpaceMathDirectory,"Values"}]];
 listMisc = FileNames[{"*.m"},ToFileName[{$SpaceMathDirectory,"Miscellaneous"}]];
 listLimits = FileNames[{"*.m"},ToFileName[{$SpaceMathDirectory,"Limits"}]];
 listChiSquare = FileNames[{"*.m"},ToFileName[{$SpaceMathDirectory,"ChiSquare"}]];
-listWorkArea = FileNames[{"*.m"},ToFileName[{$SpaceMathDirectory,"WorkArea"}]];
+(*listWorkArea = FileNames[{"*.m"},ToFileName[{$SpaceMathDirectory,"WorkArea"}]];*)
 
 AppendTo[$ContextPath, "SpaceMath`Package`"];
 
@@ -107,8 +109,7 @@ SMDeclareHeader/@listValues;
 SMDeclareHeader/@listMisc;
 SMDeclareHeader/@listLimits;
 SMDeclareHeader/@listChiSquare;
-SMDeclareHeader/@listWorkArea;
-
+(*SMDeclareHeader/@listWorkArea;*)
 
 Get/@listHiggsData;
 Get/@listLFVprocesses;
@@ -117,7 +118,7 @@ Get/@listValues;
 Get/@listMisc;
 Get/@listLimits;
 Get/@listChiSquare;
-Get/@listWorkArea;
+(*Get/@listWorkArea;*)
 
 EndPackage[];
 
